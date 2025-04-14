@@ -2,187 +2,214 @@
 
 📧 gokulkscientist@gmail.com  
 📱 +31 617 89 58 33  
-🏠 Room no. 403 E, Kolej EFG, Kamycka 129, Praha – 165 00
+🏠 Room no. 403 E, Kolej EFG, Kamycka 129, Praha – 165 00  
 
-🔗 [LinkedIn](https://linkedin.com/in/gokul-ks) | 🌐 [GitHub](https://www.github.com/gokultcr) | ✍️ [Blog](https://shadowsofinternet.blogspot.com) | 📸 [Pexels](https://www.pexels.com/@gokul-ks)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue)](https://linkedin.com/in/gokul-ks)  
+[![GitHub](https://img.shields.io/badge/GitHub-Portfolio-black)](https://www.github.com/gokultcr)  
+[![Blog](https://img.shields.io/badge/Blog-Read-orange)](https://shadowsofinternet.blogspot.com)  
+[![Pexels](https://img.shields.io/badge/Pexels-Photos-green)](https://www.pexels.com/@gokul-ks)
 
+---
 
-## Objective 🚀
+## 🚀 Objective
 
 To excel in Artificial Intelligence by working with complete dedication and acquiring new skills. Highly interested in interdisciplinary research to provide solutions for unsolved problems.
 
+---
 
-## Education 📚
+<details>
+<summary><strong>🎓 Education</strong></summary>
 
-* **Doctor of Philosophy in Applied Geoinformatics and Remote Sensing in Forestry** (Currently Pursuing)
-    * _Focus: Machine Learning and Deep Learning_
-    * Faculty of Forestry and Wood Sciences, Czech University of Life Sciences, Prague, Czech Republic
+- **Ph.D. in Applied Geoinformatics and Remote Sensing in Forestry**  
+  *Faculty of Forestry and Wood Sciences, Czech University of Life Sciences, Prague (Ongoing)*  
+  _Focus: Machine Learning and Deep Learning_
 
-* **Master of Philosophy in Computer Science** (2019 - 2021)
-    * _Focus: E-Learning Analytics & Nature-Inspired Computing_
-    * Department of Computer Science, Central University of Tamil Nadu, India
-    * First-class 89%
+- **M.Phil. in Computer Science (2019 - 2021)**  
+  _E-Learning Analytics & Nature-Inspired Computing_  
+  Central University of Tamil Nadu, India — **89%**
 
-* **Master of Science in Computer Science** (2016-2018)
-    * _Focus: Artificial Intelligence_
-    * Department of Computer Science, Central University of Kerala, India
-    * First-class 74%
+- **M.Sc. in Computer Science (2016 - 2018)**  
+  _Artificial Intelligence_  
+  Central University of Kerala, India — **74%**
 
-* **Bachelor of Science in Computer Science** (2013-2016)
-    * _Focus: Computer Science, Electronics, Mathematics_
-    * University of Calicut, India
-    * First-class 69%
+- **B.Sc. in Computer Science (2013 - 2016)**  
+  University of Calicut, India — **69%**
 
+- **Advanced Diploma in Graphic Designing**  
+  Adobe & Govt. of Kerala — Grade **B**
 
-## Courses 🎓
+</details>
 
-* **Advanced Diploma in Graphic Designing**
-    * _Adobe & Government of Kerala, India_
-    * Achieved a commendable B Grade
+---
 
+<details>
+<summary><strong>🌟 Volunteer & Leadership</strong></summary>
 
-## Volunteer Experience & Leadership 🌟
+- WG Member, **3DForEcoTech (COST ACTION CA20118)**  
+- Student Leader, **Kamos**, Faculty of Forestry, CZU  
+- Volunteer, **Blue Cross of India (2019–2022)**  
+- **Alumni Executive Member**, CUTN  
+- **President**, ASCI, CUK (2018)  
+- **Executive Member**, ASCI, CUK (2017)
 
-* **3DForEcoTech (COST ACTION CA20118)** - Working group member (2022-Present)
-* **Kamos (FLD, CZU)** - Leading New Ph.D. Students in Faculty of Forestry and Wood Sciences, CZU (2023-Present)
-* **Blue Cross of India** - Volunteer (2019-2022)
-* **Alumni Executive Member** - Department of Computer Science, Central University of Kerala (2020-Present)
-* **President** - Association of Students in Computational Intelligence (ASCI) (2018), Department of Computer Science, Central University of Kerala
-* **Executive Member** - Association of Students in Computational Intelligence (ASCI) (2017), Department of Computer Science, Central University of Kerala
+</details>
 
+---
 
-## Honors & Awards 🏆
+<details>
+<summary><strong>🏆 Honors & Awards</strong></summary>
 
-* **INSPIRE AWARD (2010)** - Department of Science and Technology, Government of India
-* **ITC CONFERENCE GRANT** - 3DForEcoTech; FOR SILVILASER ABSTRACT (2023)
-* **A GRADE IN SCIENCE EXHIBITIONS**
-    * Sub-district level Science Exhibition, Kerala (2012)
-    * State-level INSPIRE Exhibition, Government of India (2011)
-    * District level INSPIRE Exhibition, Government of India (2011)
-* **ACADEMIC EXCELLENCE**
-    * School Topper, Vivekodhayam Boy’s H S S, Thrissur (2010)
-    * Best Student, Vivekodhayam Boy’s H S S, Thrissur (2010)
-    * Class Topper during VIII, IX & X, Vivekodhayam Boy’s H S S, Thrissur (2008—10)
+- **INSPIRE AWARD** – Dept. of Science & Tech, India (2010)  
+- **ITC CONFERENCE GRANT** – 3DForEcoTech (2023)  
+- **A Grade** – Science Exhibitions (2011–2012)  
+- **Academic Excellence** – Vivekodhayam Boy’s H S S, Thrissur  
 
+</details>
 
-## Certifications 🔖
+---
 
-* **Elements of AI** - University of Helsinki, Finland
-* **Build Your Own Chatbot** - IBM
-* **Google Analytics Individual Qualification** - Google
-* **Fundamentals of Digital Marketing** - Google
-* **Managing Data Analysis** - Coursera
-* **Artificial Intelligence Foundations** - Machine Learning, Neural Networks - LinkedIn
-* **Learning Hadoop, Hadoop: Data Analysis** - LinkedIn
-* **Security Testing Essential Training** - LinkedIn
-* **Python for Data Science** - Udemy
-* **Diploma in Basic Game Development** - Udemy
-* **Artificial Intelligence and Predictive Analysis using Python** - Udemy
-* **Data Analytics- Introduction to Machine Learning** - Alison
+<details>
+<summary><strong>🔖 Certifications</strong></summary>
 
+- Elements of AI – University of Helsinki  
+- Build Your Own Chatbot – IBM  
+- Google Analytics / Digital Marketing – Google  
+- Artificial Intelligence Foundations – LinkedIn  
+- Security Testing, Hadoop, Python, Game Dev – Udemy  
+- Data Analytics & ML – Alison  
 
-## Ethical Hacking & Volunteering Experience 🛡️
+</details>
 
-* **Vulnerability Assessment:** Central University Website (January 2020)
-* **Cybercrime Investigation Assistance:** Kerala Police (April 2020)
+---
 
+<details>
+<summary><strong>🛡️ Ethical Hacking & Volunteering</strong></summary>
 
-## Publications 🌟
+- Vulnerability Assessment – Central University Website (2020)  
+- Cybercrime Investigation Assistance – Kerala Police (2020)  
 
-* **Poster (International):** Enhancing Bark Classification with Boosted Support Vector Machines - Silvilaser London, September 6-8, UCL London ([Link](https://doi.org/10.5281/zenodo.10446837))
+</details>
 
-* **Conference Paper (International):** Machine learning technique for close range tree species classification - UNECE/FAO Team of Specialists on Forest Communication- Forest Communicators’ Network annual meeting and workshop, Prague 20-22 June 2023 ([Link](https://doi.org/10.5281/zenodo.10458204))
+---
 
-* **Pre-print:** A Comparative Analysis of Machine Learning Algorithms for Tree Species Recognition - EGU General Assembly 2023, Vienna, Austria ([Link](https://meetingorganizer.copernicus.org/EGU23/EGU23-14332.html))
+<details>
+<summary><strong>🌟 Publications</strong></summary>
 
-* **Poster (International):** TREE SPECIES CLASSIFICATION FROM RGB IMAGES BASED ON TREE BARK - 3DForEcoTech CONFERENCE, PRAGUE ([Link](https://doi.org/10.5281/zenodo.10447108))
+- **Silvilaser 2023, London** – Bark Classification [🔗](https://doi.org/10.5281/zenodo.10446837)  
+- **UNECE/FAO Conference** – ML Tree Species Classification [🔗](https://doi.org/10.5281/zenodo.10458204)  
+- **EGU General Assembly 2023** – Pre-print on Tree Species Recognition [🔗](https://meetingorganizer.copernicus.org/EGU23/EGU23-14332.html)  
+- **3DForEcoTech Conference** – RGB Bark Classification [🔗](https://doi.org/10.5281/zenodo.10447108)  
+- **International E-Conferences** (2020 & 2021) – Recommender & COVID-19  
+- **Malaya Journal of Mathematik** – Diabetes Prediction [🔗](https://doi.org/10.26637/MJMS2101/0137)
 
-* **Conference Paper (International):** NATURAL INSPIRED RECOMMENDER SYSTEM BASED ON STUDENT PERFORMANCE - INTERNATIONAL E-CONFERENCE ON ‘INNOVATIONS IN INFORMATION TECHNOLOGY’, BHARATHIYAR UNIVERSITY, TAMIL NADU, 2020
+</details>
 
-* **Conference Paper (International):** COVID-19, KERALA ANALYSIS AND PREDICTION - INTERNATIONAL CONFERENCE ON ‘DATA SCIENCE AND INFORMATION ECOSYSTEM’21’, MADURAI KAMARAJ UNIVERSITY, TAMIL NADU, 2021
+---
 
-* **Journal Paper:** IMPROVED TYPE 2 DIABETES PREDICTION USING A STACKED ENSEMBLE CLASSIFIER - MALAYA JOURNAL OF MATHEMATIK, VOL.S, NO.1, 600-605 ([Link](https://doi.org/10.26637/MJMS2101/0137))
+<details>
+<summary><strong>🚀 Participation</strong></summary>
 
+- UNECE/FAO Forest Communicators’ Network, Prague  
+- 23rd New York State Cyber Security Conference  
+- FDP & Workshops on AI, Bioinformatics, Pattern Recognition  
+- Tech Events – Technofrenzy, ASCI Outreach  
 
+</details>
 
-## Participation 🚀
+---
 
-* **UNECE/FAO Team of Specialists on Forest Communication** - Forest Communicators’ Network annual meeting and workshop, Prague 20-22 June 2023  
-* **23rd ANNUAL NEW YORK STATE CYBER SECURITY CONFERENCE** - NEW YORK, 2021
-* **FDP ON COMPUTER SCIENCE & BIOLOGY** - AICTE & MANGALORE UNIVERSITY
-* **NATIONAL WORKSHOP ON ARTIFICIAL INTELLIGENCE** - AICTE & CENTRAL UNIVERSITY OF KERALA
-* **NATIONAL WORKSHOP ON PATTERN RECOGNITION** - CENTRAL UNIVERSITY OF KERALA
-* **TECHNOFRENZY 2k16, INTELLI-OUTREACH PROGRAM** - ASCI
+<details>
+<summary><strong>🔬 Research Undergoing</strong></summary>
 
+- ML/DL Benchmarking for Tree Species Classification  
+- 3D Data-Based Tree Classification via Photogrammetry, LiDAR  
 
-## Research Undergoing 🔬
+</details>
 
-* **Benchmarking of Machine learning and Deep learning algorithms for Tree species classification**
-* **Application of Machine learning methods for tree species classification** - Utilizing three-dimensional data from close-range photogrammetry and iPhone laser scanning
+---
 
+<details>
+<summary><strong>🌍 EU Projects</strong></summary>
 
-## European Union Projects 🌍
+- **REFOREST** – WG4 Researcher [🔗](https://agroreforest.eu)  
+- **3DForEcoTech** – WG1-4 Researcher [🔗](https://3dforecotech.eu)
 
-* **REFOREST** - Researcher (Working group 4) - [Reforest](https://agroreforest.eu/)
-* **3DForEcoTech (COST ACTION CA20118)** - Researcher (Working group 1,2,3,4) - [3DForEcoTech](https://3dforecotech.eu/)
+</details>
 
+---
 
+<details>
+<summary><strong>🚀 Personal Projects</strong></summary>
 
-## Personal Projects 🚀
+- Tree Species Classification – CZU, Prague  
+- Nature-Inspired E-learning Analytics – CUTN  
+- Tumor Detection – CUK  
+- Cardiac Motion Estimation – CUK  
 
-* **Application of Machine learning methods for tree species classification**  - Czech University of Life Sciences (CZU), Prague, Czech Republic (09/2022 – 12/2023)
-* **E-learning Analytics & Nature-Inspired Computing** - CENTRAL UNIVERSITY OF TAMIL NADU (09/2019 – 2021)
-* **Tumor Detection and Classification using Support Vector Machine** - CENTRAL UNIVERSITY OF KERALA (11/2017 – 03/2018)
-* **Deformable Mesh Model for Cardiac Motion Estimation from MRI Data** - CENTRAL UNIVERSITY OF KERALA (06/2017 – 11/2017)
+</details>
 
+---
 
-## Internships 🎓
+<details>
+<summary><strong>🎓 Internships</strong></summary>
 
-* **UNIVERSITY COLLEGE LONDON (UCL)** - (NOVEMBER-DECEMBER, 2023)
-* **NATIONAL FOREST CENTRE-FOREST RESEARCH INSTITUTE, ZVOLEN, SLOVAK REPUBLIC** - (MAY-AUGUST 2023)
+- University College London (2023)  
+- Forest Research Institute, Slovakia (2023)  
 
+</details>
 
-## Research Software Developed 🛠️
+---
 
-* **Windows Applications (.exe):**
-    * Standard Machine learning Classifier 1.0
-    * Advanced Machine learning Classifier 1.0
-    * CNN Parameter Tuner 1.0
-    * Image Augmentor 1.0
-* **Android Application (.apk):**
-    * Bark Classifier 1.0
+<details>
+<summary><strong>🛠️ Software Developed</strong></summary>
 
+- **.exe Tools:** ML Classifier, CNN Tuner, Image Augmentor  
+- **.apk App:** Bark Classifier  
 
-## Skills & Competencies 🌟
+</details>
 
-* Machine Learning
-* Nature-Inspired Computing
-* Research Leadership
-* Artificial Intelligence
-* Data Analysis
-* Digital Image Processing
-* Digital Speech Processing
-* Photogrammetry
+---
 
+<details>
+<summary><strong>🌟 Skills & Competencies</strong></summary>
 
-## Software & Programming Languages 💻
+- ML / DL / AI  
+- Nature-Inspired Computing  
+- Research Leadership  
+- Data & Image Processing  
+- Photogrammetry  
 
-* **Tools:** Weka, Apache Mahout, Microsoft Office, Latex
-* **Languages:** C++, Python, MatLab,  C, Java, PHP, .Net, Android Studio, Adobe Master Collection
+</details>
 
+---
 
-## Languages 🗣️
+<details>
+<summary><strong>💻 Tools & Languages</strong></summary>
 
-* English - Fluent
-* Malayalam - Native
-* Hindi - Basic skills
-* Tamil - Basic skills
+- **Tools:** Weka, Mahout, MS Office, LaTeX  
+- **Languages:** Python, C++, C, Java, PHP, MATLAB, .NET, Android Studio  
 
+</details>
 
-## References 📚
+---
 
+<details>
+<summary><strong>🗣️ Languages</strong></summary>
 
-* **Dr. Martin Mokros** - `mokros@fld.czu.cz` - Scientist, Department of Geography, University College London
-* **Dr. P. Thiyagarajan** - `thiyaguphd@gmail.com` - Associate Professor, Department of Computer Science – Central University of Tamil Nadu, Tamil Nadu, India
-* **Dr. Thasleema T M** - `thasnitm1@hotmail.com` - Assistant Professor, Department of Computer Science –Central University of Kerala, India
-* **Dr. R. Rajesh** - `kollamrajeshr@gmail.com` - Professor, Department of Computer Science–Central University of Kerala, India
+- English – Fluent  
+- Malayalam – Native  
+- Hindi & Tamil – Basic  
+
+</details>
+
+---
+
+<details>
+<summary><strong>📚 References</strong></summary>
+
+- **Dr. Martin Mokros** – `mokros@fld.czu.cz`  
+- **Dr. P. Thiyagarajan** – `thiyaguphd@gmail.com`  
+- **Dr. Thasleema T M** – `thasnitm1@hotmail.com`  
+- **Dr. R. Rajesh** – `kollamrajeshr@gmail.com`
+
+</details>
