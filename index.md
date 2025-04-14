@@ -1,215 +1,139 @@
-# Gokul K S
+<!-- PROFILE HEADER -->
+<p align="center">
+  <img src="assets/profile.jpg" width="140" height="140" style="border-radius: 50%" alt="Profile Picture"/>
+</p>
 
-📧 gokulkscientist@gmail.com  
-📱 +31 617 89 58 33  
-🏠 Room no. 403 E, Kolej EFG, Kamycka 129, Praha – 165 00  
+<h1 align="center">Hi, I'm Gokul K S 👋</h1>
+<p align="center"><em>AI Researcher | ML Enthusiast | Remote Sensing Explorer</em></p>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue)](https://linkedin.com/in/gokul-ks)  
-[![GitHub](https://img.shields.io/badge/GitHub-Portfolio-black)](https://www.github.com/gokultcr)  
-[![Blog](https://img.shields.io/badge/Blog-Read-orange)](https://shadowsofinternet.blogspot.com)  
-[![Pexels](https://img.shields.io/badge/Pexels-Photos-green)](https://www.pexels.com/@gokul-ks)
+<p align="center">
+  📧 gokulkscientist@gmail.com · 📱 +31 617 89 58 33 · 📍 Prague, Czech Republic  
+  <br/>
+  <a href="https://linkedin.com/in/gokul-ks">LinkedIn</a> •
+  <a href="https://github.com/gokultcr">GitHub</a> •
+  <a href="https://shadowsofinternet.blogspot.com">Blog</a> •
+  <a href="https://www.pexels.com/@gokul-ks">Pexels</a>
+</p>
+
+---
+
+## 🔎 Navigation
+<p align="center">
+  <a href="#projects">🌿 Projects</a> • 
+  <a href="#publications">📚 Publications</a> • 
+  <a href="#skills">💡 Skills</a> • 
+  <a href="#awards">🏆 Awards</a> • 
+  <a href="#certifications">🎓 Certifications</a> • 
+  <a href="#contact">📬 Contact</a>
+</p>
 
 ---
 
 ## 🚀 Objective
-
-To excel in Artificial Intelligence by working with complete dedication and acquiring new skills. Highly interested in interdisciplinary research to provide solutions for unsolved problems.
-
----
-
-<details>
-<summary><strong>🎓 Education</strong></summary>
-
-- **Ph.D. in Applied Geoinformatics and Remote Sensing in Forestry**  
-  *Faculty of Forestry and Wood Sciences, Czech University of Life Sciences, Prague (Ongoing)*  
-  _Focus: Machine Learning and Deep Learning_
-
-- **M.Phil. in Computer Science (2019 - 2021)**  
-  _E-Learning Analytics & Nature-Inspired Computing_  
-  Central University of Tamil Nadu, India — **89%**
-
-- **M.Sc. in Computer Science (2016 - 2018)**  
-  _Artificial Intelligence_  
-  Central University of Kerala, India — **74%**
-
-- **B.Sc. in Computer Science (2013 - 2016)**  
-  University of Calicut, India — **69%**
-
-- **Advanced Diploma in Graphic Designing**  
-  Adobe & Govt. of Kerala — Grade **B**
-
-</details>
+> To excel in Artificial Intelligence through dedicated research, interdisciplinary exploration, and solving complex real-world challenges.
 
 ---
 
-<details>
-<summary><strong>🌟 Volunteer & Leadership</strong></summary>
+## 🎓 Education
 
-- WG Member, **3DForEcoTech (COST ACTION CA20118)**  
-- Student Leader, **Kamos**, Faculty of Forestry, CZU  
-- Volunteer, **Blue Cross of India (2019–2022)**  
-- **Alumni Executive Member**, CUTN  
-- **President**, ASCI, CUK (2018)  
-- **Executive Member**, ASCI, CUK (2017)
-
-</details>
+| Degree | Institution | Focus |
+|--------|-------------|-------|
+| **PhD in Applied Geoinformatics & Remote Sensing** _(Ongoing)_ | Czech University of Life Sciences | ML & DL in Forestry |
+| **MPhil in Computer Science (89%)** | Central University of Tamil Nadu | E-Learning Analytics, Nature-Inspired Computing |
+| **MSc in Computer Science (74%)** | Central University of Kerala | Artificial Intelligence |
+| **BSc in Computer Science (69%)** | University of Calicut | CS, Electronics, Math |
 
 ---
 
-<details>
-<summary><strong>🏆 Honors & Awards</strong></summary>
+## 🌿 Projects
 
-- **INSPIRE AWARD** – Dept. of Science & Tech, India (2010)  
-- **ITC CONFERENCE GRANT** – 3DForEcoTech (2023)  
-- **A Grade** – Science Exhibitions (2011–2012)  
-- **Academic Excellence** – Vivekodhayam Boy’s H S S, Thrissur  
-
-</details>
-
----
-
-<details>
-<summary><strong>🔖 Certifications</strong></summary>
-
-- Elements of AI – University of Helsinki  
-- Build Your Own Chatbot – IBM  
-- Google Analytics / Digital Marketing – Google  
-- Artificial Intelligence Foundations – LinkedIn  
-- Security Testing, Hadoop, Python, Game Dev – Udemy  
-- Data Analytics & ML – Alison  
-
-</details>
+| Project | Description | Tools |
+|--------|-------------|-------|
+| **Tree Bark Classifier**<br><sub><em>[View Project](https://github.com/gokultcr/treebark-classifier)</em></sub> | Used CNNs and SVMs to classify tree species from bark images using iPhone LIDAR and photogrammetry. | Python, CNN, OpenCV, TensorFlow |
+| **E-learning Analytics** | Modeled student performance data with swarm intelligence-based recommenders. | Nature-Inspired Computing, Python |
+| **Tumor Detection using SVM** | Developed ML model for early tumor classification from MRI data. | MATLAB, SVM |
+| **Cardiac Motion Estimation** | Applied deformable mesh modeling for MRI-based motion analysis. | MATLAB |
 
 ---
 
-<details>
-<summary><strong>🛡️ Ethical Hacking & Volunteering</strong></summary>
+## 🌟 Research & Publications
 
-- Vulnerability Assessment – Central University Website (2020)  
-- Cybercrime Investigation Assistance – Kerala Police (2020)  
+- **[Bark Classification with SVMs – Silvilaser 2023 (Poster)](https://doi.org/10.5281/zenodo.10446837)**
+- **[ML for Tree Classification – UNECE FAO 2023 (Conf. Paper)](https://doi.org/10.5281/zenodo.10458204)**
+- **[Preprint – EGU 2023, Vienna](https://meetingorganizer.copernicus.org/EGU23/EGU23-14332.html)**
+- **[COVID-19 Kerala Analysis – DSIE’21 (Conf. Paper)]**
+- **[Diabetes Prediction using Ensemble Models – Malaya Journal](https://doi.org/10.26637/MJMS2101/0137)**
 
-</details>
-
----
-
-<details>
-<summary><strong>🌟 Publications</strong></summary>
-
-- **Silvilaser 2023, London** – Bark Classification [🔗](https://doi.org/10.5281/zenodo.10446837)  
-- **UNECE/FAO Conference** – ML Tree Species Classification [🔗](https://doi.org/10.5281/zenodo.10458204)  
-- **EGU General Assembly 2023** – Pre-print on Tree Species Recognition [🔗](https://meetingorganizer.copernicus.org/EGU23/EGU23-14332.html)  
-- **3DForEcoTech Conference** – RGB Bark Classification [🔗](https://doi.org/10.5281/zenodo.10447108)  
-- **International E-Conferences** (2020 & 2021) – Recommender & COVID-19  
-- **Malaya Journal of Mathematik** – Diabetes Prediction [🔗](https://doi.org/10.26637/MJMS2101/0137)
-
-</details>
+📌 *See full list under `/publications`*
 
 ---
 
-<details>
-<summary><strong>🚀 Participation</strong></summary>
+## 🏆 Honors & Awards
 
-- UNECE/FAO Forest Communicators’ Network, Prague  
-- 23rd New York State Cyber Security Conference  
-- FDP & Workshops on AI, Bioinformatics, Pattern Recognition  
-- Tech Events – Technofrenzy, ASCI Outreach  
-
-</details>
+- 🥇 INSPIRE Award – Govt. of India
+- 📜 ITC CONFERENCE GRANT (2023)
+- 🧠 Science Exhibition A Grade – Kerala & National Levels
+- 🏫 Academic Topper – School Level, Vivekodhayam Boys HSS
 
 ---
 
-<details>
-<summary><strong>🔬 Research Undergoing</strong></summary>
+## 🔖 Certifications
 
-- ML/DL Benchmarking for Tree Species Classification  
-- 3D Data-Based Tree Classification via Photogrammetry, LiDAR  
-
-</details>
-
----
-
-<details>
-<summary><strong>🌍 EU Projects</strong></summary>
-
-- **REFOREST** – WG4 Researcher [🔗](https://agroreforest.eu)  
-- **3DForEcoTech** – WG1-4 Researcher [🔗](https://3dforecotech.eu)
-
-</details>
+- ✅ Elements of AI – University of Helsinki
+- 🤖 Build Your Own Chatbot – IBM
+- 📊 Google Analytics & Digital Marketing – Google
+- 🧠 AI Foundations – LinkedIn
+- 🐘 Learning Hadoop – LinkedIn
+- 🧪 Security Testing – LinkedIn
+- 🎮 Game Development – Udemy
+- 🧬 Predictive AI with Python – Udemy
 
 ---
 
-<details>
-<summary><strong>🚀 Personal Projects</strong></summary>
+## 💻 Skills
 
-- Tree Species Classification – CZU, Prague  
-- Nature-Inspired E-learning Analytics – CUTN  
-- Tumor Detection – CUK  
-- Cardiac Motion Estimation – CUK  
-
-</details>
+- **Core:** Machine Learning, Deep Learning, AI, Digital Image & Speech Processing
+- **Specialized:** Photogrammetry, Remote Sensing, Nature-Inspired Algorithms
+- **Tools:** WEKA, Mahout, Adobe Suite, LaTeX
+- **Languages:** Python, C++, Java, MATLAB, PHP, C, .Net
 
 ---
 
-<details>
-<summary><strong>🎓 Internships</strong></summary>
+## 🌐 Projects & Contributions
 
-- University College London (2023)  
-- Forest Research Institute, Slovakia (2023)  
-
-</details>
-
----
-
-<details>
-<summary><strong>🛠️ Software Developed</strong></summary>
-
-- **.exe Tools:** ML Classifier, CNN Tuner, Image Augmentor  
-- **.apk App:** Bark Classifier  
-
-</details>
+- **REFOREST EU Project** – [agroreforest.eu](https://agroreforest.eu/)
+- **3DForEcoTech COST Action CA20118** – [3dforecotech.eu](https://3dforecotech.eu/)
+- **Software Developed:**  
+  - `Standard ML Classifier.exe`  
+  - `CNN Parameter Tuner.exe`  
+  - `Bark Classifier.apk` *(Android)*
 
 ---
 
-<details>
-<summary><strong>🌟 Skills & Competencies</strong></summary>
+## 🛡️ Cybersecurity & Volunteering
 
-- ML / DL / AI  
-- Nature-Inspired Computing  
-- Research Leadership  
-- Data & Image Processing  
-- Photogrammetry  
-
-</details>
+- ✅ Assisted Kerala Police in Cybercrime Investigations (2020)
+- 🕵️‍♂️ Conducted Website Vulnerability Assessment – CUTN (2020)
+- 🐾 Volunteer – Blue Cross of India (2019–2022)
 
 ---
 
-<details>
-<summary><strong>💻 Tools & Languages</strong></summary>
+## 🧭 Internships
 
-- **Tools:** Weka, Mahout, MS Office, LaTeX  
-- **Languages:** Python, C++, C, Java, PHP, MATLAB, .NET, Android Studio  
-
-</details>
-
----
-
-<details>
-<summary><strong>🗣️ Languages</strong></summary>
-
-- English – Fluent  
-- Malayalam – Native  
-- Hindi & Tamil – Basic  
-
-</details>
+| Organization | Period |
+|--------------|--------|
+| **University College London (UCL)** | Nov–Dec 2023 |
+| **Forest Research Institute, Slovakia** | May–Aug 2023 |
 
 ---
 
-<details>
-<summary><strong>📚 References</strong></summary>
+## 💬 Languages
 
-- **Dr. Martin Mokros** – `mokros@fld.czu.cz`  
-- **Dr. P. Thiyagarajan** – `thiyaguphd@gmail.com`  
-- **Dr. Thasleema T M** – `thasnitm1@hotmail.com`  
-- **Dr. R. Rajesh** – `kollamrajeshr@gmail.com`
+- English (Fluent)
+- Malayalam (Native)
+- Hindi, Tamil (Basic)
 
-</details>
+---
+
+## 📬 Contact
+
