@@ -5,58 +5,57 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gokul K S - AI Researcher</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); 
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
       color: #fff;
       line-height: 1.6;
-      background-image: url('https://www.example.com/abstract-background.jpg'); /* Replace with your desired graphic background */
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      animation: fadeInBackground 2s ease-in-out;
     }
 
-    @keyframes fadeInBackground {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
-    header, section, footer {
+    header {
       max-width: 960px;
       margin: auto;
       padding: 2rem;
+      text-align: center;
       animation: fadeIn 1s ease-in-out;
     }
 
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     img.profile {
       border-radius: 50%;
       width: 180px;
       height: 180px;
-      transition: transform 0.3s ease-in-out;
+      transition: transform 0.4s ease;
+      box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
     }
 
     img.profile:hover {
       transform: scale(1.1);
+      box-shadow: 0 4px 20px rgba(0, 255, 255, 0.5);
     }
 
     h1, h2 {
+      font-family: 'Poppins', sans-serif;
       text-align: center;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #ff6347;
       animation: slideIn 1s ease-in-out;
     }
 
@@ -71,24 +70,14 @@
       }
     }
 
-    a {
+    .links a {
       color: #00bfff;
       text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    a:hover {
-      color: #ff6347;
-    }
-
-    .center {
-      text-align: center;
-    }
-
-    .links a {
-      margin: 0 0.5rem;
+      font-size: 1.2rem;
+      margin: 0.5rem;
       position: relative;
       overflow: hidden;
+      transition: color 0.3s;
     }
 
     .links a::after {
@@ -96,7 +85,7 @@
       position: absolute;
       width: 100%;
       height: 2px;
-      background: #00bfff;
+      background: #ff6347;
       bottom: 0;
       left: -100%;
       transition: all 0.3s;
@@ -106,57 +95,12 @@
       left: 0;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
+    .links a:hover {
+      color: #ff6347;
     }
 
-    table, th, td {
-      border: 1px solid #444;
-      padding: 0.5rem;
-    }
-
-    ul li {
-      margin: 0.3rem 0;
-    }
-
-    .badges img {
-      margin: 0.3rem;
-    }
-
-    footer img {
-      display: block;
-      margin: auto;
-      max-width: 60%;
-      animation: fadeInFooter 1s ease-in-out;
-    }
-
-    @keyframes fadeInFooter {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-
-    footer p {
-      text-align: center;
-      font-style: italic;
-      margin-top: 1rem;
-      font-size: 1.2rem;
-    }
-
-    /* Hover animation for table rows */
-    table tr:hover {
-      background-color: rgba(0, 191, 255, 0.1);
-      transform: scale(1.02);
-      transition: transform 0.3s ease;
-    }
-
-    /* Animation for Section */
     section {
+      padding: 2rem;
       animation: fadeInSection 1s ease-in-out;
     }
 
@@ -170,10 +114,85 @@
         transform: translateY(0);
       }
     }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    table, th, td {
+      border: 1px solid #444;
+      padding: 1rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    table tr:hover {
+      background-color: rgba(255, 99, 71, 0.1);
+      transform: scale(1.02);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    footer img {
+      width: 60%;
+      transition: transform 0.4s ease;
+    }
+
+    footer img:hover {
+      transform: rotate(10deg);
+    }
+
+    footer p {
+      font-style: italic;
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
+
+    /* Card Layout for Projects and other sections */
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 255, 255, 0.2);
+      width: 250px;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 20px rgba(0, 255, 255, 0.5);
+    }
+
+    .card h3 {
+      color: #ff6347;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      color: #ccc;
+    }
+
   </style>
 </head>
 <body>
-  <header class="center">
+
+  <header>
     <img src="assets/profile.jpg" alt="Gokul K S Profile" class="profile">
     <h1>🌌 Gokul K S</h1>
     <p><strong>AI Researcher | Ph.D. Scholar | Machine Learning Enthusiast</strong></p>
@@ -195,16 +214,21 @@
   </section>
 
   <section>
-    <h2>🧠 Quick Cosmic Links</h2>
-    <ul>
-      <li><a href="projects/index.md">Projects</a></li>
-      <li><a href="publications/index.md">Publications</a></li>
-      <li><a href="skills/index.md">Skills & Tools</a></li>
-      <li><a href="#-research-software-developed">Research Software</a></li>
-      <li><a href="#-internships">Internships</a></li>
-      <li><a href="#-certifications">Certifications</a></li>
-      <li><a href="#-languages">Languages</a></li>
-    </ul>
+    <h2>✨ Featured Projects</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Tree Species Classification</h3>
+        <p>CNN + Lidar + RGB Data</p>
+      </div>
+      <div class="card">
+        <h3>Swarm Intelligence</h3>
+        <p>Recommender System</p>
+      </div>
+      <div class="card">
+        <h3>Tumor Detection</h3>
+        <p>Machine Learning with SVM</p>
+      </div>
+    </div>
   </section>
 
   <section>
@@ -218,100 +242,10 @@
     </table>
   </section>
 
-  <section>
-    <h2>🛠️ Tech Stack</h2>
-    <div class="badges">
-      <img src="https://img.shields.io/badge/Python-3.9-blue">
-      <img src="https://img.shields.io/badge/C++-High-blue">
-      <img src="https://img.shields.io/badge/MATLAB-Scripting-orange">
-      <img src="https://img.shields.io/badge/LaTeX-Typesetting-lightgrey">
-      <img src="https://img.shields.io/badge/TensorFlow-2.x-orange">
-      <img src="https://img.shields.io/badge/Weka-ML-yellow">
-      <img src="https://img.shields.io/badge/Adobe-Creative%20Tools-red">
-    </div>
-  </section>
-
-  <section>
-    <h2>🪐 Current Research Focus</h2>
-    <ul>
-      <li>Tree Species Classification using CNN & Lidar</li>
-      <li>3D Close Range Photogrammetry + AI</li>
-      <li>Remote Sensing & Forestry Informatics</li>
-      <li>Nature-Inspired Algorithms for Personalized Learning</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>🛸 Research Software Developed</h2>
-    <table>
-      <tr><th>Tool</th><th>Type</th><th>Purpose</th></tr>
-      <tr><td>Standard ML Classifier 1.0</td><td>.exe</td><td>Traditional ML algorithms</td></tr>
-      <tr><td>Advanced ML Classifier 1.0</td><td>.exe</td><td>Ensemble + Deep Models</td></tr>
-      <tr><td>CNN Parameter Tuner</td><td>.exe</td><td>Automate CNN hyperparameters</td></tr>
-      <tr><td>Image Augmentor</td><td>.exe</td><td>Data augmentation utility</td></tr>
-      <tr><td>Bark Classifier</td><td>Android App</td><td>On-device inference for tree bark</td></tr>
-    </table>
-  </section>
-
-  <section>
-    <h2>✨ Featured Projects</h2>
-    <ul>
-      <li>Tree Species Classification — CNN + RGB + Lidar + Close Range</li>
-      <li>Swarm Intelligence Recommender System</li>
-      <li>Tumor Detection with SVM</li>
-      <li>Heart Motion Estimation via Mesh Models</li>
-    </ul>
-    <p><a href="projects/index.md">Dive deeper in the Projects page →</a></p>
-  </section>
-
-  <section>
-    <h2>🧬 Publications & Conferences</h2>
-    <ul>
-      <li>Silvilaser, London | EGU, Vienna | UNECE/FAO, Prague</li>
-      <li>ML + Tree Bark | Ensemble Learning | Nature-Inspired RS</li>
-    </ul>
-    <p><a href="publications/index.md">Explore all Publications →</a></p>
-  </section>
-
-  <section>
-    <h2>🛰️ EU Projects & Collaborations</h2>
-    <ul>
-      <li>3DForEcoTech (COST CA20118)</li>
-      <li>REFOREST Working Group 4</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>🧾 Certifications</h2>
-    <table>
-      <tr><th>Name</th><th>Provider</th></tr>
-      <tr><td>Elements of AI</td><td>Univ. of Helsinki</td></tr>
-      <tr><td>Chatbot Builder</td><td>IBM</td></tr>
-      <tr><td>Digital Marketing</td><td>Google</td></tr>
-      <tr><td>Data Science with Python</td><td>Udemy</td></tr>
-      <tr><td>Security Testing</td><td>LinkedIn</td></tr>
-    </table>
-  </section>
-
-  <section>
-    <h2>🌍 Languages</h2>
-    <ul>
-      <li>English: Fluent</li>
-      <li>Malayalam: Native</li>
-      <li>Hindi, Tamil: Basic</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>📞 Contact</h2>
-    <p>Email: gokulkscientist@gmail.com<br>
-    Phone: +31 617 89 58 33<br>
-    Address: Room no. 403 E, Kolej EFG, Kamycka 129, Praha – 165 00</p>
-  </section>
-
   <footer>
     <img src="assets/footer-forest.gif" alt="AI Forest Footer">
-    <p class="center"><em>"Artificial Intelligence isn’t just a tool — it’s a way of seeing the world differently."</em><br>— Gokul K S</p>
+    <p>"Artificial Intelligence isn’t just a tool — it’s a way of seeing the world differently."<br>— Gokul K S</p>
   </footer>
+
 </body>
 </html>
