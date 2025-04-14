@@ -1,139 +1,148 @@
-<!-- PROFILE HEADER -->
+
+<!-- Cosmic Theme Start -->
 <p align="center">
-  <img src="assets/profile.jpg" width="140" height="140" style="border-radius: 50%" alt="Profile Picture"/>
+  <img src="assets/profile.jpg" width="180" height="180" style="border-radius: 50%;" alt="Gokul K S Profile"/>
 </p>
 
-<h1 align="center">Hi, I'm Gokul K S 👋</h1>
-<p align="center"><em>AI Researcher | ML Enthusiast | Remote Sensing Explorer</em></p>
+<h1 align="center">🌌 Gokul K S</h1>
 
 <p align="center">
-  📧 gokulkscientist@gmail.com · 📱 +31 617 89 58 33 · 📍 Prague, Czech Republic  
-  <br/>
+  <b>AI Researcher | Ph.D. Scholar | Machine Learning Enthusiast</b>  
+</p>
+
+<p align="center">
+  <a href="mailto:gokulkscientist@gmail.com">📧 Email</a> •
   <a href="https://linkedin.com/in/gokul-ks">LinkedIn</a> •
   <a href="https://github.com/gokultcr">GitHub</a> •
   <a href="https://shadowsofinternet.blogspot.com">Blog</a> •
-  <a href="https://www.pexels.com/@gokul-ks">Pexels</a>
+  <a href="https://www.pexels.com/@gokul-ks">Photography</a>
 </p>
 
 ---
 
-## 🔎 Navigation
-<p align="center">
-  <a href="#projects">🌿 Projects</a> • 
-  <a href="#publications">📚 Publications</a> • 
-  <a href="#skills">💡 Skills</a> • 
-  <a href="#awards">🏆 Awards</a> • 
-  <a href="#certifications">🎓 Certifications</a> • 
-  <a href="#contact">📬 Contact</a>
-</p>
+## 🚀 Mission
+
+> *To transcend traditional research with cutting-edge solutions in Artificial Intelligence and Remote Sensing.*  
+> *My pursuit is fueled by curiosity, interdisciplinary exploration, and a deep love for nature and data.*
 
 ---
 
-## 🚀 Objective
-> To excel in Artificial Intelligence through dedicated research, interdisciplinary exploration, and solving complex real-world challenges.
+## 🧠 Quick Cosmic Links
+
+- [Projects](projects/index.md)
+- [Publications](publications/index.md)
+- [Skills & Tools](skills/index.md)
+- [Research Software](#-research-software-developed)
+- [Internships](#-internships)
+- [Certifications](#-certifications)
+- [Languages](#-languages)
 
 ---
 
 ## 🎓 Education
 
-| Degree | Institution | Focus |
-|--------|-------------|-------|
-| **PhD in Applied Geoinformatics & Remote Sensing** _(Ongoing)_ | Czech University of Life Sciences | ML & DL in Forestry |
-| **MPhil in Computer Science (89%)** | Central University of Tamil Nadu | E-Learning Analytics, Nature-Inspired Computing |
-| **MSc in Computer Science (74%)** | Central University of Kerala | Artificial Intelligence |
-| **BSc in Computer Science (69%)** | University of Calicut | CS, Electronics, Math |
+| Degree | Institution | Specialization | Year |
+|--------|-------------|----------------|------|
+| Ph.D. | CZU, Prague | ML in Remote Sensing | Ongoing |
+| M.Phil | CUTN, India | E-Learning & AI | 2019–21 |
+| M.Sc | CUK, India | Artificial Intelligence | 2016–18 |
+| B.Sc | University of Calicut | CS, Electronics | 2013–16 |
 
 ---
 
-## 🌿 Projects
+## 🛠️ Tech Stack
 
-| Project | Description | Tools |
-|--------|-------------|-------|
-| **Tree Bark Classifier**<br><sub><em>[View Project](https://github.com/gokultcr/treebark-classifier)</em></sub> | Used CNNs and SVMs to classify tree species from bark images using iPhone LIDAR and photogrammetry. | Python, CNN, OpenCV, TensorFlow |
-| **E-learning Analytics** | Modeled student performance data with swarm intelligence-based recommenders. | Nature-Inspired Computing, Python |
-| **Tumor Detection using SVM** | Developed ML model for early tumor classification from MRI data. | MATLAB, SVM |
-| **Cardiac Motion Estimation** | Applied deformable mesh modeling for MRI-based motion analysis. | MATLAB |
-
----
-
-## 🌟 Research & Publications
-
-- **[Bark Classification with SVMs – Silvilaser 2023 (Poster)](https://doi.org/10.5281/zenodo.10446837)**
-- **[ML for Tree Classification – UNECE FAO 2023 (Conf. Paper)](https://doi.org/10.5281/zenodo.10458204)**
-- **[Preprint – EGU 2023, Vienna](https://meetingorganizer.copernicus.org/EGU23/EGU23-14332.html)**
-- **[COVID-19 Kerala Analysis – DSIE’21 (Conf. Paper)]**
-- **[Diabetes Prediction using Ensemble Models – Malaya Journal](https://doi.org/10.26637/MJMS2101/0137)**
-
-📌 *See full list under `/publications`*
+![Python](https://img.shields.io/badge/Python-3.9-blue)
+![C++](https://img.shields.io/badge/C++-High-blue)
+![MATLAB](https://img.shields.io/badge/MATLAB-Scripting-orange)
+![LaTeX](https://img.shields.io/badge/LaTeX-Typesetting-lightgrey)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)
+![Weka](https://img.shields.io/badge/Weka-ML-yellow)
+![Adobe Suite](https://img.shields.io/badge/Adobe-Creative%20Tools-red)
 
 ---
 
-## 🏆 Honors & Awards
+## 🪐 Current Research Focus
 
-- 🥇 INSPIRE Award – Govt. of India
-- 📜 ITC CONFERENCE GRANT (2023)
-- 🧠 Science Exhibition A Grade – Kerala & National Levels
-- 🏫 Academic Topper – School Level, Vivekodhayam Boys HSS
-
----
-
-## 🔖 Certifications
-
-- ✅ Elements of AI – University of Helsinki
-- 🤖 Build Your Own Chatbot – IBM
-- 📊 Google Analytics & Digital Marketing – Google
-- 🧠 AI Foundations – LinkedIn
-- 🐘 Learning Hadoop – LinkedIn
-- 🧪 Security Testing – LinkedIn
-- 🎮 Game Development – Udemy
-- 🧬 Predictive AI with Python – Udemy
+- **Tree Species Classification using CNN & Lidar**
+- **3D Close Range Photogrammetry + AI**
+- **Remote Sensing & Forestry Informatics**
+- **Nature-Inspired Algorithms for Personalized Learning**
 
 ---
 
-## 💻 Skills
+## 🛸 Research Software Developed
 
-- **Core:** Machine Learning, Deep Learning, AI, Digital Image & Speech Processing
-- **Specialized:** Photogrammetry, Remote Sensing, Nature-Inspired Algorithms
-- **Tools:** WEKA, Mahout, Adobe Suite, LaTeX
-- **Languages:** Python, C++, Java, MATLAB, PHP, C, .Net
-
----
-
-## 🌐 Projects & Contributions
-
-- **REFOREST EU Project** – [agroreforest.eu](https://agroreforest.eu/)
-- **3DForEcoTech COST Action CA20118** – [3dforecotech.eu](https://3dforecotech.eu/)
-- **Software Developed:**  
-  - `Standard ML Classifier.exe`  
-  - `CNN Parameter Tuner.exe`  
-  - `Bark Classifier.apk` *(Android)*
+| Tool | Type | Purpose |
+|------|------|---------|
+| Standard ML Classifier 1.0 | .exe | Traditional ML algorithms |
+| Advanced ML Classifier 1.0 | .exe | Ensemble + Deep Models |
+| CNN Parameter Tuner | .exe | Automate CNN hyperparameters |
+| Image Augmentor | .exe | Data augmentation utility |
+| Bark Classifier | Android App | On-device inference for tree bark |
 
 ---
 
-## 🛡️ Cybersecurity & Volunteering
+## ✨ Featured Projects
 
-- ✅ Assisted Kerala Police in Cybercrime Investigations (2020)
-- 🕵️‍♂️ Conducted Website Vulnerability Assessment – CUTN (2020)
-- 🐾 Volunteer – Blue Cross of India (2019–2022)
+- **Tree Species Classification** — CNN + RGB + Lidar + Close Range
+- **Swarm Intelligence Recommender System**
+- **Tumor Detection with SVM**
+- **Heart Motion Estimation via Mesh Models**
 
----
-
-## 🧭 Internships
-
-| Organization | Period |
-|--------------|--------|
-| **University College London (UCL)** | Nov–Dec 2023 |
-| **Forest Research Institute, Slovakia** | May–Aug 2023 |
+> Dive deeper in the [Projects page →](projects/index.md)
 
 ---
 
-## 💬 Languages
+## 🧬 Publications & Conferences
 
-- English (Fluent)
-- Malayalam (Native)
-- Hindi, Tamil (Basic)
+- Silvilaser, London | EGU, Vienna | UNECE/FAO, Prague  
+- ML + Tree Bark | Ensemble Learning | Nature-Inspired RS  
+- [Explore all Publications →](publications/index.md)
 
 ---
 
-## 📬 Contact
+## 🛰️ EU Projects & Collaborations
+
+- **3DForEcoTech (COST CA20118)**  
+- **REFOREST Working Group 4**
+
+---
+
+## 🧾 Certifications
+
+| Name | Provider |
+|------|----------|
+| Elements of AI | Univ. of Helsinki |
+| Chatbot Builder | IBM |
+| Digital Marketing | Google |
+| Data Science with Python | Udemy |
+| Security Testing | LinkedIn |
+
+---
+
+## 🌍 Languages
+
+- English: Fluent  
+- Malayalam: Native  
+- Hindi, Tamil: Basic
+
+---
+
+## 📞 Contact
+
+**Email:** gokulkscientist@gmail.com  
+**Phone:** +31 617 89 58 33  
+**Address:** Room no. 403 E, Kolej EFG, Kamycka 129, Praha – 165 00
+
+---
+
+<p align="center">
+  <img src="assets/footer-forest.gif" alt="AI Forest Footer" width="60%" />
+</p>
+
+---
+
+> *"Artificial Intelligence isn’t just a tool — it’s a way of seeing the world differently."*  
+> — Gokul K S
 
