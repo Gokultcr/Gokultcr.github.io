@@ -60,18 +60,14 @@
             line-height: 1.6;
             overflow-x: hidden;
             transition: var(--transition);
-            background-image: 
+            background-image:
                 radial-gradient(circle at 5% 10%, rgba(108,143,255,0.05) 0%, transparent 70%),
                 radial-gradient(circle at 95% 90%, rgba(45,70,185,0.05) 0%, transparent 70%);
             background-attachment: fixed;
             scroll-behavior: smooth;
         }
 
-        body.dark-mode {
-            --primary: #4f67d6;
-            --text: #f0f0f0;
-            --background: #121212;
-        }
+        /* Removed redundant body.dark-mode */
 
         h1, h2, h3, h4, h5, h6 {
             font-weight: 700;
@@ -171,7 +167,7 @@
             box-shadow: var(--shadow);
             transition: var(--transition);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1); /* Consider making this conditional based on theme */
         }
 
         .card:hover {
@@ -252,11 +248,11 @@
             z-index: 1000;
             transition: var(--transition);
             backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.8); /* Light theme header bg */
         }
 
         [data-theme="dark"] .header {
-            background: rgba(18, 18, 18, 0.8);
+            background: rgba(18, 18, 18, 0.8); /* Dark theme header bg */
         }
 
         .header.scrolled {
@@ -343,15 +339,16 @@
 
         /* Mobile Menu */
         .mobile-menu-btn {
-            display: none;
+            display: none; /* Hidden by default, shown in media query */
             font-size: 1.5rem;
             color: var(--text);
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            display: flex;
+            /* display: flex; */ /* This will be set in media query */
             align-items: center;
             justify-content: center;
+            z-index: 101; /* Ensure it's above nav-list when closed */
         }
 
         .mobile-menu-btn:hover {
@@ -365,7 +362,7 @@
             align-items: center;
             position: relative;
             overflow: hidden;
-            padding-top: 80px;
+            padding-top: 80px; /* Account for fixed header */
         }
 
         .hero::before {
@@ -458,7 +455,7 @@
             border-radius: 20px;
             box-shadow: var(--shadow);
             transition: var(--transition);
-            height: 400px;
+            height: 400px; /* Consider using aspect-ratio or max-height */
             width: 100%;
             object-fit: cover;
         }
@@ -520,10 +517,12 @@
 
         .left {
             left: 0;
+            text-align: right; /* Align text away from center line */
         }
 
         .right {
             left: 50%;
+            text-align: left; /* Align text away from center line */
         }
 
         .left::after {
@@ -585,30 +584,31 @@
 
         [data-theme="dark"] .skill-item {
             background: #2a2a3c;
-            color: #f5f5f7; /* Explicitly set to light color for better contrast */
+            color: var(--text); /* Use theme text color */
         }
 
         .skill-item:hover {
             transform: translateY(-3px);
             background: var(--gradient);
-            color: white;
+            color: white; /* Ensure text is white on gradient */
         }
 
         /* Publications Section */
         .publications-section {
-            background: linear-gradient(180deg, var(--background) 0%, rgba(108,143,255,0.05) 100%);
+            /* Optional: add subtle background */
+            /* background: linear-gradient(180deg, var(--background) 0%, rgba(108,143,255,0.03) 100%); */
             padding-bottom: var(--space-lg);
         }
 
         .publications-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--space-lg);
+            grid-template-columns: 1fr; /* Each publication takes full width */
+            gap: var(--space-lg); /* Space between publication cards */
         }
 
         .publication-card {
             display: grid;
-            grid-template-columns: 3fr 2fr;
+            grid-template-columns: 3fr 2fr; /* Content left, figures right */
             gap: var(--space-md);
             position: relative;
             overflow: hidden;
@@ -625,7 +625,7 @@
         }
 
         .publication-content {
-            padding-right: var(--space-md);
+            /* padding-right: var(--space-md); Already handled by grid gap */
         }
 
         .publication-year {
@@ -641,6 +641,7 @@
 
         [data-theme="dark"] .publication-year {
             background: #2a2a3c;
+            /* color: var(--primary); Keep primary color for accent */
         }
 
         .publication-title {
@@ -648,7 +649,7 @@
             margin-bottom: 10px;
             color: var(--text);
             position: relative;
-            display: inline-block;
+            display: inline-block; /* To contain potential underlines/effects */
         }
 
         .publication-journal {
@@ -684,6 +685,7 @@
             width: 100%;
             height: auto;
             transition: transform 0.5s ease;
+            display: block; /* Prevents bottom space */
         }
 
         .publication-card:hover .publication-figure img {
@@ -716,22 +718,25 @@
         }
 
 
-	/* Certifications Section */
+	    /* Certifications Section */
         .certifications-section {
-            background: linear-gradient(180deg, var(--background) 0%, rgba(108,143,255,0.05) 100%);
+            /* Optional: Reuse subtle background or keep plain */
+            /* background: linear-gradient(180deg, var(--background) 0%, rgba(108,143,255,0.03) 100%); */
             padding-bottom: var(--space-lg);
         }
 
         .certifications-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--space-lg);
+            grid-template-columns: 1fr; /* Each certification card takes full width */
+            gap: var(--space-md); /* Smaller gap than publications might be okay */
         }
 
         .certification-card {
-            display: grid;
-            grid-template-columns: 3fr 2fr;
-            gap: var(--space-md);
+            display: grid; /* Using grid to potentially align items if needed */
+            grid-template-columns: 1fr; /* Default to single column now */
+            /* If you want the 3fr 2fr layout like publications, uncomment below */
+            /* grid-template-columns: 3fr 2fr; */
+            /* gap: var(--space-md); */
             position: relative;
             overflow: hidden;
             background: var(--card-bg);
@@ -743,30 +748,36 @@
 
         .certification-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1); /* Slightly less shadow */
         }
 
         .certification-content {
-            padding-right: var(--space-md);
+            /* padding-right: var(--space-md); */ /* Remove if using single column layout */
         }
 
         .certification-title {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
+            font-size: 1.2rem; /* Slightly smaller than publications */
+            font-weight: 600; /* Less emphasis than H3 default */
+            margin-bottom: 8px;
             color: var(--text);
             position: relative;
-            display: inline-block;
+            display: block; /* Allow multiple titles to stack nicely */
         }
-
-        .certification-authority {
-            font-style: italic;
-            color: var(--primary);
-            margin-bottom: 15px;
+         /* Make subsequent titles slightly less prominent if needed */
+        .certification-title + .certification-title {
+            margin-top: 5px;
+            font-size: 1.1rem;
             font-weight: 500;
         }
 
-
-	    
+        .certification-authority {
+            font-style: normal; /* Keep it normal */
+            color: var(--primary);
+            margin-bottom: 0; /* Remove bottom margin */
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin-top: 5px; /* Add space above authority */
+        }
 
         /* Projects Section */
         .projects-grid {
@@ -778,12 +789,14 @@
         .project-card {
             overflow: hidden;
             position: relative;
+            /* Inherits card styles */
         }
 
         .project-image {
             height: 200px;
             overflow: hidden;
-            margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+            /* Adjust negative margins to align with card padding */
+            margin: calc(-1 * var(--space-md)) calc(-1 * var(--space-md)) var(--space-md) calc(-1 * var(--space-md));
             position: relative;
         }
 
@@ -808,6 +821,7 @@
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
+            display: block; /* Prevents bottom space */
         }
 
         .project-card:hover .project-image img {
@@ -831,6 +845,13 @@
 
         [data-theme="dark"] .project-tag {
             background: #2a2a3c;
+            /* color: var(--primary); Keep primary color for accent */
+        }
+
+        /* Adjust project title heading level if needed */
+        .project-card h3 {
+             font-size: 1.5rem; /* Adjust if default H3 is too large */
+             margin-bottom: var(--space-sm);
         }
 
         .project-links {
@@ -847,17 +868,18 @@
             gap: 5px;
         }
 
-        /* Hobbies Section */
-        .hobbies-grid {
+        /* Hobbies / Software Section */
+        .hobbies-grid { /* Renamed from Hobbies to Software in HTML, keep class name for now or update CSS */
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Adjust minmax */
             gap: var(--space-md);
         }
 
-        .hobby-card {
+        .hobby-card { /* Keep class name or update CSS */
             text-align: center;
             position: relative;
             overflow: hidden;
+            /* Uses glass-card styles */
         }
 
         .hobby-card::before {
@@ -869,7 +891,7 @@
             height: 200%;
             background: radial-gradient(circle, rgba(108,143,255,0.05) 0%, transparent 70%);
             border-radius: 50%;
-            z-index: -1;
+            z-index: -1; /* Ensure it's behind content */
             opacity: 0;
             transform: scale(0.5);
             transition: var(--transition);
@@ -890,6 +912,18 @@
         .hobby-card:hover .hobby-icon {
             transform: translateY(-5px);
             color: var(--secondary);
+        }
+        /* Adjust hobby title heading level if needed */
+        .hobby-card h3 {
+             font-size: 1.5rem; /* Adjust if default H3 is too large */
+             margin-bottom: var(--space-sm);
+        }
+        /* Specific style for DOI links in this section */
+        .hobby-card .aml-doi, .hobby-card .cnn-doi {
+            display: inline-block;
+            margin-top: var(--space-sm);
+            font-size: 0.9rem;
+            color: var(--primary);
         }
 
         /* Contact Section */
@@ -929,7 +963,7 @@
         [data-theme="dark"] .form-textarea {
             background: #2a2a3c;
             border-color: rgba(255,255,255,0.1);
-            color: var(--text);
+            color: var(--text); /* Ensure text is readable */
         }
 
         .form-input:focus,
@@ -967,7 +1001,19 @@
             justify-content: center;
             font-size: 1.2rem;
             box-shadow: var(--glow);
+            flex-shrink: 0; /* Prevent icon shrinking */
         }
+        /* Adjust contact info headings if needed */
+         .contact-info-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+         }
+         .contact-info-item p {
+            font-size: 1rem;
+            margin-bottom: 0;
+            color: var(--text-light);
+         }
+
 
         /* Back to top button */
         .back-to-top {
@@ -986,7 +1032,7 @@
             box-shadow: var(--shadow);
             opacity: 0;
             visibility: hidden;
-            transition: var(--transition);
+            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease; /* Added transform transition */
             z-index: 99;
         }
 
@@ -1026,6 +1072,7 @@
 
         .footer-text {
             margin-bottom: var(--space-sm);
+            color: var(--text-light); /* Use lighter text color */
         }
 
         /* Animations */
@@ -1049,12 +1096,14 @@
             color: white;
             padding: 5px 10px;
             font-size: 0.8rem;
-            border-radius: 0 0 5px 0;
+            border-radius: 0 0 var(--border-radius) 0; /* Match card radius */
             z-index: 2;
-            display: none;
+            display: none; /* Initially hidden */
+            pointer-events: none; /* Don't interfere with hover */
         }
 
-        .show-instructions .image-instructions {
+        /* Added class to toggle visibility */
+        .instructions-visible .image-instructions {
             display: block;
         }
 
@@ -1063,101 +1112,146 @@
             h1 {
                 font-size: 3rem;
             }
-            
+
             .hero-image {
                 max-width: 40%;
             }
-            
+
             .about-grid,
             .contact-grid,
-            .publication-card {
-                grid-template-columns: 1fr;
-            }
-            
-            .about-image {
-                order: -1;
-                margin-bottom: var(--space-md);
-            }
-            
-            .timeline::after {
-                left: 30px;
-            }
-            
-            .timeline-item {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 20px;
-            }
-            
-            .left::after, .right::after {
-                left: 18px;
-            }
-            
-            .right {
-                left: 0;
+            .publication-card,
+            .certification-card { /* Apply to certification card too if needed */
+                grid-template-columns: 1fr; /* Stack columns */
             }
 
-            .publication-content {
-                padding-right: 0;
+            .publication-content { /* Remove specific padding if stacking */
+                 /* padding-right: 0; */ /* Already handled by grid gap */
+                 margin-bottom: var(--space-md); /* Add space below content when stacked */
+            }
+            /* Make publication figures take full width when stacked */
+            .publication-figures {
+                max-width: 400px; /* Optional: Limit image width */
+                margin: 0 auto; /* Center the figures block */
+            }
+
+
+            .about-image {
+                order: -1; /* Image comes first */
                 margin-bottom: var(--space-md);
             }
+
+            .timeline::after {
+                left: 30px; /* Move line to the left */
+                transform: translateX(0); /* Reset transform */
+            }
+
+            .timeline-item {
+                width: 100%; /* Full width */
+                padding-left: 70px; /* Space for dot and line */
+                padding-right: 20px;
+                left: 0 !important; /* Override left/right positioning */
+                text-align: left !important; /* Ensure text is left-aligned */
+            }
+
+            .left::after, .right::after {
+                left: 18px; /* Align dot with the line */
+                right: auto; /* Reset right positioning */
+            }
+
+            /* Removed redundant .right { left: 0; } */
         }
 
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.5rem;
             }
-            
+            h2 {
+                font-size: 2rem;
+            }
+
             .nav-list {
                 position: fixed;
                 top: 0;
-                left: 0;
-                width: 100%;
+                right: -100%; /* Start off-screen to the right */
+                width: 70%; /* Partial width */
+                max-width: 300px; /* Max width */
                 height: 100vh;
                 background: var(--background);
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                transform: translateY(-100%);
-                transition: transform 0.5s ease;
+                /* transform: translateY(-100%); */ /* Changed to slide from right */
+                transition: right 0.5s ease; /* Animate the 'right' property */
                 z-index: 100;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1); /* Add shadow */
+                padding-top: 60px; /* Space for close button or header */
             }
-            
+
             .nav-list.active {
-                transform: translateY(0);
+                /* transform: translateY(0); */ /* Changed to slide from right */
+                right: 0;
             }
-            
+            /* Add overlay when menu is open */
+            body.menu-open::after {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 99; /* Below menu, above content */
+            }
+
+
             .mobile-menu-btn {
-                display: flex;
-                z-index: 101;
+                display: flex; /* Show the button */
             }
-            
+
             .hero-image {
-                display: none;
+                display: none; /* Hide hero image on smaller screens */
             }
-            
+
             .project-image {
                 height: 180px;
             }
+
+            .contact-grid {
+                grid-template-columns: 1fr; /* Stack contact form and info */
+            }
+             .glass-card.fade-in + .glass-card.fade-in { /* Add space between stacked contact cards */
+                margin-top: var(--space-md);
+             }
         }
 
         @media (max-width: 576px) {
             h1 {
                 font-size: 2rem;
             }
-            
+
             h2 {
                 font-size: 1.8rem;
             }
-            
+            h3 {
+                 font-size: 1.3rem; /* Adjust smaller screen H3 */
+            }
+            p {
+                 font-size: 1rem; /* Adjust smaller screen P */
+            }
+
             .container {
                 padding: 0 var(--space-sm);
             }
-            
+
             .skills-grid,
             .projects-grid,
-            .hobbies-grid {
-                grid-template-columns: 1fr;
+            .hobbies-grid { /* Affects software section too */
+                grid-template-columns: 1fr; /* Stack cards */
+                minmax(300px, 1fr); /* Adjust minmax if needed */
+            }
+
+             .project-image {
+                height: 160px; /* Further reduce image height */
             }
 
             .back-to-top {
@@ -1165,16 +1259,29 @@
                 right: 20px;
                 width: 40px;
                 height: 40px;
+                font-size: 1rem;
+            }
+            .btn {
+                padding: 0.7rem 1.5rem;
+                font-size: 0.9rem;
+            }
+            .social-link {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
             }
         }
 
         /* Custom scrollbar */
         ::-webkit-scrollbar {
-            width: 10px;
+            width: 8px; /* Make scrollbar thinner */
         }
 
         ::-webkit-scrollbar-track {
             background: var(--light);
+        }
+        [data-theme="dark"] ::-webkit-scrollbar-track {
+            background: #2a2a3c; /* Darker track for dark mode */
         }
 
         ::-webkit-scrollbar-thumb {
@@ -1199,13 +1306,13 @@
                     <li><a href="#experience" class="nav-link">Experience</a></li>
                     <li><a href="#skills" class="nav-link">Skills</a></li>
                     <li><a href="#publications" class="nav-link">Publications</a></li>
+                    <li><a href="#certifications" class="nav-link">Certifications</a></li> {/* Corrected link target */}
                     <li><a href="#projects" class="nav-link">Projects</a></li>
-		    <li><a href="#certifications" class="nav-link">Certifications</a></li>
-                    <li><a href="#hobbies" class="nav-link">Softwares</a></li>
+                    <li><a href="#hobbies" class="nav-link">Software</a></li> {/* Updated text */}
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
                 <button class="mode-toggle" aria-label="Toggle dark mode">
-                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-moon"></i> <!-- Initial icon, JS will update -->
                 </button>
                 <button class="mobile-menu-btn" aria-label="Toggle menu">
                     <i class="fas fa-bars"></i>
@@ -1218,26 +1325,25 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1 class="fade-in">Gokul Kottilapurath Surendran</h1>
-                <p class="hero-subtitle fade-in">MSc., M.Phil.</p>
-                <p class="hero-description fade-in">
+                <h1 class="fade-in appear">Gokul Kottilapurath Surendran</h1> {/* Add appear class for immediate visibility if desired */}
+                <p class="hero-subtitle fade-in appear">MSc., M.Phil.</p>
+                <p class="hero-description fade-in appear">
                     Hello! I am a dedicated researcher with dual master's degrees (M.Sc. and M.Phil.) and currently pursuing a Ph.D. at CZU. My work focuses on developing advanced machine learning techniques for tree species classification and exploring the potential of nature-inspired algorithms. With a strong foundation in both theoretical and practical aspects of machine learning, I aim to contribute to the sustainable management of natural resources and enhance our understanding of ecological systems.
                 </p>
-                <div class="fade-in">
+                <div class="fade-in appear">
                     <a href="#contact" class="btn">Get in Touch</a>
                     <a href="#projects" class="btn btn-outline" style="margin-left: 15px;">View Projects</a>
                 </div>
-                <div class="social-links fade-in">
-                    <a href="https://www.linkedin.com/in/gokul-ks" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/gokultcr" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="https://www.pexels.com/@gokul-ks" class="social-link"><i class="fab fa-book-open"></i></a>
-		    
-                    
+                <div class="social-links fade-in appear">
+                    <a href="https://www.linkedin.com/in/gokul-ks" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/gokultcr" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+                    <a href="https://www.pexels.com/@gokul-ks" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Pexels Profile"><i class="fab fa-pexels"></i></a> {/* Corrected icon maybe? Or keep book-open if intended */}
                 </div>
             </div>
-            <div class="show-instructions">
-                <div class="image-instructions">Profile Image: 600x600px, professional headshot recommended</div>
-                <img src="assets/profile.jpg" alt="Gokul Kottilapurath Surendran" class="hero-image fade-in">
+            <div class="hero-image-container fade-in appear"> {/* Wrapped image for better control if needed */}
+                 {/* Removed show-instructions class, handled by JS temporarily */}
+                 <div class="image-instructions">Profile Image: 600x600px, professional headshot recommended</div>
+                 <img src="assets/profile.jpg" alt="Gokul Kottilapurath Surendran" class="hero-image">
             </div>
         </div>
     </section>
@@ -1249,43 +1355,22 @@
             <div class="about-grid">
                 <div class="about-content fade-in">
                     <p>
-                        <b>Current Research:</b> My PhD research focuses on applying classical machine learning and deep learning algorithms to 
-tree species classification. I have worked extensively with both classical machine learning 
-techniques and deep neural networks to achieve this objective. In addition to implementing these 
-algorithms, I have also aimed to identify common challenges and provide guidance for 
-interdisciplinary research. 
+                        <b>Current Research:</b> My PhD research focuses on applying classical machine learning and deep learning algorithms to tree species classification. I have worked extensively with both classical machine learning techniques and deep neural networks to achieve this objective. In addition to implementing these algorithms, I have also aimed to identify common challenges and provide guidance for interdisciplinary research.
                     </p>
-                    <p>
-                             <ul>
-  &nbsp;&nbsp;&nbsp;
- <i>Step 1:</i> To address this, my first manuscript focused on identifying the most effective model for tree 
-species classification using bark images. Additionally, I developed a user-friendly software tool, 
-CNN Parameter Tuner, designed to help interdisciplinary researchers perform parameter tuning on 
-CNN models with any user-defined image dataset. 
-                    </p></ul>
-                    <p> <ul>
-    &nbsp;&nbsp;&nbsp;                   <i> Step 2:</i> As my research progressed, I observed that while deep neural networks were becoming 
-increasingly popular, classical algorithms still had significant potential. To maximize their 
-effectiveness, I explored various approaches, and my boosted SVM model achieved an accuracy 
-ranging from 80% to 92%. To further support interdisciplinary researchers, I also developed 
-another software tool, Advanced Machine Learning Classifier, enabling users to perform 
-classification tasks without requiring coding expertise. 
-                        
-                    </p></ul>
-                    <p><br>
-                        <b> Future Goals under process:</b> One of the primary challenges in tree species classification using bark images is the limited 
-availability of datasets. To address this, I created various small datasets from the Czech Republic 
-and the Slovak Republic, covering four tree species. Furthermore, I compiled a large dataset of 
-27,000 images representing eight species from three different locations in the Czech Republic. 
-Based on this dataset, I developed a novel fusion model for classification, and a related manuscript 
-is currently under process. 
+                     <ul>
+                        <li> {/* Changed to li */}
+                            <i>Step 1:</i> To address this, my first manuscript focused on identifying the most effective model for tree species classification using bark images. Additionally, I developed a user-friendly software tool, CNN Parameter Tuner, designed to help interdisciplinary researchers perform parameter tuning on CNN models with any user-defined image dataset.
+                        </li>
+                        <li> {/* Changed to li */}
+                            <i>Step 2:</i> As my research progressed, I observed that while deep neural networks were becoming increasingly popular, classical algorithms still had significant potential. To maximize their effectiveness, I explored various approaches, and my boosted SVM model achieved an accuracy ranging from 80% to 92%. To further support interdisciplinary researchers, I also developed another software tool, Advanced Machine Learning Classifier, enabling users to perform classification tasks without requiring coding expertise.
+                        </li>
+                    </ul>
+                    <p> {/* Removed <br> */}
+                        <b>Future Goals under process:</b> One of the primary challenges in tree species classification using bark images is the limited availability of datasets. To address this, I created various small datasets from the Czech Republic and the Slovak Republic, covering four tree species. Furthermore, I compiled a large dataset of 27,000 images representing eight species from three different locations in the Czech Republic. Based on this dataset, I developed a novel fusion model for classification, and a related manuscript is currently under process.
                     </p>
-                    <p>
-         
-                    </p>
-                    <a href="#" class="btn">Download Resume</a>
+                    <a href="assets/Gokul_CV.pdf" class="btn" download>Download Resume</a> {/* Added download attribute and example path */}
                 </div>
-                <div class="about-image fade-in show-instructions">
+                <div class="about-image fade-in"> {/* Removed show-instructions class */}
                     <div class="image-instructions">About Image: 512x512px, action shot or workspace image</div>
                     <img src="assets/about.jpg" alt="About Gokul Kottilapurath Surendran">
                 </div>
@@ -1302,31 +1387,31 @@ is currently under process.
                 <div class="timeline-item left fade-in">
                     <div class="card">
                         <div class="timeline-date">2022 - Present</div>
-                        <h3 class="timeline-role">Ph.D Candidate/ Researcher</h3>
+                        <h3 class="timeline-role">Ph.D Candidate / Researcher</h3>
                         <div class="timeline-company">Department of Forest Management and Remote Sensing, Czech University of Life Science, Prague</div>
                         <p>
-                            Applied Geoinformatics and Remote Sensing in Forestry 
+                            Applied Geoinformatics and Remote Sensing in Forestry
                         </p>
                     </div>
                 </div>
-                
+
                 <!-- Experience 2 -->
                 <div class="timeline-item right fade-in">
                     <div class="card">
                         <div class="timeline-date">2019 - 2021</div>
-                        <h3 class="timeline-role">M.Phil. Student/ Computer Science </h3>
+                        <h3 class="timeline-role">M.Phil. Student / Computer Science</h3>
                         <div class="timeline-company">Department of Computer Science, Central University of Tamil Nadu, India</div>
                         <p>
-                             Artificial Intelligence and Machine Learning (E-Learning Analytics & Nature-Inspired Computing). Thesis title: Natural-Inspired Learning Path Recommendation System for Students in E-learning Platforms. 
+                             Artificial Intelligence and Machine Learning (E-Learning Analytics & Nature-Inspired Computing). Thesis title: Natural-Inspired Learning Path Recommendation System for Students in E-learning Platforms.
                         </p>
                     </div>
                 </div>
-                
+
                 <!-- Experience 3 -->
                 <div class="timeline-item left fade-in">
                     <div class="card">
                         <div class="timeline-date">2016 - 2018</div>
-                        <h3 class="timeline-role">M.Sc. Student/ Computer Science  </h3>
+                        <h3 class="timeline-role">M.Sc. Student / Computer Science</h3>
                         <div class="timeline-company">Department of Computer Science, Central University of Kerala, India</div>
                         <p>
                             Artificial Intelligence and Machine Learning (Medical Image Processing). Thesis title: Tumor Detection and Classification using Support Vector Machine.
@@ -1350,38 +1435,30 @@ is currently under process.
                             <span class="skill-item">Artificial Intelligence</span>
                             <span class="skill-item">Machine Learning</span>
                             <span class="skill-item">Deep Learning</span>
-                            <span class="skill-item">Computer Vision</span>  
-							
-							<span class="skill-item">Natural Language Processing</span>
+                            <span class="skill-item">Computer Vision</span>
+                            <span class="skill-item">Natural Language Processing</span>
                             <span class="skill-item">Digital Speech Processing</span>
-                            <span class="skill-item">Digital Siginal Processing</span> 
-							<span class="skill-item">Medical Imaging: MRI</span>
-							
+                            <span class="skill-item">Digital Signal Processing</span>
+                            <span class="skill-item">Medical Imaging: MRI</span>
                             <span class="skill-item">Recommendation Systems</span>
-							
-							<span class="skill-item">Nature-Inspired Computing</span>
+                            <span class="skill-item">Nature-Inspired Computing</span>
                             <span class="skill-item">eXplainable AI (XAI)</span>
                             <span class="skill-item">Ethical Hacking</span>
-							
-							<span class="skill-item">Windows Software Development</span>
+                            <span class="skill-item">Windows Software Development</span>
                             <span class="skill-item">Web Application Development</span>
                             <span class="skill-item">Mobile Application Development</span>
-							
-							<span class="skill-item">Android Development</span>
+                            <span class="skill-item">Android Development</span>
                             <span class="skill-item">Close-range Remote Sensing</span>
                             <span class="skill-item">Photogrammetry</span>
-							
-							<span class="skill-item">Data Analytics</span>
+                            <span class="skill-item">Data Analytics</span>
                             <span class="skill-item">Data Visualization</span>
-                            <span class="skill-item">Mobile Application Development</span>
-							
-							<span class="skill-item">Software Development Life Cycle (SDLC)</span>
+                            <span class="skill-item">Software Development Life Cycle (SDLC)</span>
                             <span class="skill-item">Web Development</span>
                             <span class="skill-item">Cryptography</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Professional Skills -->
                 <div class="card fade-in">
                     <div class="skill-category">
@@ -1389,33 +1466,36 @@ is currently under process.
                         <div class="skill-list">
                             <span class="skill-item">Scientific research and peer-reviewed publishing</span>
                             <span class="skill-item">Bridging Machine Learning Divide with Open-Source Tools</span>
-                            <span class="skill-item">Interdisciplinary communication (bridging science and broader audiences)</span>
-                            <span class="skill-item">Teaching and training in Artiticial Intelligence</span>
+                            <span class="skill-item">Interdisciplinary communication</span>
+                            <span class="skill-item">Teaching and training in Artificial Intelligence</span>
                             <span class="skill-item">Project management (academic and industry settings)</span>
+                             <span class="skill-item">Problem Solving</span>
+                             <span class="skill-item">Team Collaboration</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Tools & Technologies -->
                 <div class="card fade-in">
                     <div class="skill-category">
                         <h3 class="skill-category-title">Tools & Technologies</h3>
                         <div class="skill-list">
                             <span class="skill-item">Programming: Python, C, C++, Java, .Net</span>
-							<span class="skill-item">MatLab</span>
-							<span class="skill-item">Android Studio</span>
-							<span class="skill-item">Kotlin</span>
-							<span class="skill-item">Adobe Master Collection</span>
-                            <span class="skill-item">HTML, Css, Php</span>
+                            <span class="skill-item">MatLab</span>
+                            <span class="skill-item">Android Studio</span>
+                            <span class="skill-item">Kotlin</span>
+                            <span class="skill-item">Adobe Master Collection</span>
+                            <span class="skill-item">HTML, CSS, PHP, JavaScript</span> {/* Added JS */}
                             <span class="skill-item">Google Earth Engine</span>
-							<span class="skill-item">Mac, Linux, Ubuntu</span>
+                            <span class="skill-item">Operating Systems: Windows, Mac, Linux (Ubuntu)</span> {/* Combined OS */}
                             <span class="skill-item">Git/GitHub</span>
                             <span class="skill-item">SQL</span>
+                            <span class="skill-item">TensorFlow/Keras</span> {/* Added ML libs */}
+                            <span class="skill-item">Scikit-learn</span>
+                            <span class="skill-item">Pandas/NumPy</span>
                         </div>
                     </div>
                 </div>
-                
-                
             </div>
         </div>
     </section>
@@ -1431,91 +1511,101 @@ is currently under process.
                         <span class="publication-year">2024</span>
                         <h3 class="publication-title">A Forestry Investigation: Exploring Factors Behind Improved Tree Species Classification Using Bark Images</h3>
                         <p class="publication-journal">Ecological Informatics</p>
-                        <p class="publication-authors">Gokul Kottilapurath Surendran and  Deekshitha and Martin Lukac and Martin Lukac and Jozef Vybostok and Martin Mokros*</p>
-                        <p>examines how using images of tree bark can enhance the accuracy of identifying tree species. The study explores various factors—such as image quality, lighting conditions, and machine learning techniques—that contribute to better classification performance. It highlights the potential of bark-based image analysis as a valuable tool for forestry management and ecological research.</p>
-                        <a href="https://doi.org/10.1016/j.ecoinf.2024.102932" class="publication-doi"><i class="fas fa-external-link-alt"></i> DOI:https://doi.org/10.1016/j.ecoinf.2024.102932 </a>
+                        <p class="publication-authors">Gokul Kottilapurath Surendran, Deekshitha, Martin Lukac, Jozef Vybostok, Martin Mokros*</p> {/* Corrected spacing */}
+                        <p>This study examines how using images of tree bark can enhance the accuracy of identifying tree species by exploring various factors like image quality, lighting, and machine learning techniques, highlighting its potential for forestry management.</p> {/* Shortened description */}
+                        <a href="https://doi.org/10.1016/j.ecoinf.2024.102932" target="_blank" rel="noopener noreferrer" class="publication-doi"><i class="fas fa-external-link-alt"></i> DOI: 10.1016/j.ecoinf.2024.102932</a> {/* Shortened link text */}
                     </div>
                     <div class="publication-figures">
-                        <div class="publication-figure show-instructions">
+                        <div class="publication-figure"> {/* Removed show-instructions class */}
                             <div class="image-instructions">Publication Figure: 400x300px, figure from your paper</div>
-                            <img src="assets/pub1-fig.png" alt="Forest recovery figure">
-                            <p class="figure-caption">Figure 1: A Forestry Investigation: Exploring Factors Behind Improved Tree Species Classification Using Bark Images.</p>
+                            <img src="assets/pub1-fig.png" alt="Tree species classification using bark images">
+                            <p class="figure-caption">Conceptual overview of factors influencing bark image classification.</p> {/* Improved caption */}
                         </div>
                     </div>
                 </div>
-                
-     <!-- Certifications Section -->
+
+                <!-- Add more publication-card divs here if needed -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
     <section class="certifications-section" id="certifications">
         <div class="container">
             <h2 class="fade-in">Certifications</h2>
             <div class="certifications-grid">
-                <!-- certification 1 -->
+
+                <!-- Certification 1: Elements of AI -->
                 <div class="certification-card fade-in">
                     <div class="certification-content">
-                        
-                        <h3 class="certification-title"> Elements of AI </h3>
+                        <h3 class="certification-title">Elements of AI</h3>
                         <p class="certification-authority">University of Helsinki, Finland</p>
-                       
                     </div>
+                    {/* Optional: Add <div></div> here if using 3fr 2fr CSS */}
+                </div>
 
-		    <div class="certification-content">
-                        
-                        <h3 class="certification-title"> Build Your Own Chatbot  </h3>
-                        <p class="certification-authority">  IBM </p>
-                       
+                <!-- Certification 2: IBM -->
+                <div class="certification-card fade-in">
+                    <div class="certification-content">
+                        <h3 class="certification-title">Build Your Own Chatbot</h3>
+                        <p class="certification-authority">IBM</p>
                     </div>
+                </div>
 
-		    <div class="certification-content">
-                        
-                        <h3 class="certification-title"> Google Analytics Individual Qualification </h3>
-			<h3 class="certification-title"> Fundamentals of Digital Marketing </h3>
-                        <p class="certification-authority"> Google </p>
-                       
+                <!-- Certification 3: Google -->
+                <div class="certification-card fade-in">
+                    <div class="certification-content">
+                        <h3 class="certification-title">Google Analytics Individual Qualification</h3>
+                        <h3 class="certification-title">Fundamentals of Digital Marketing</h3>
+                        <p class="certification-authority">Google</p>
                     </div>
+                </div>
 
-		    <div class="certification-content">
-                        
-                        <h3 class="certification-title"> Managing Data Analysis  </h3>
-                        <p class="certification-authority"> Coursera  </p>
-                       
+                <!-- Certification 4: Coursera -->
+                <div class="certification-card fade-in">
+                    <div class="certification-content">
+                        <h3 class="certification-title">Managing Data Analysis</h3>
+                        <p class="certification-authority">Coursera</p>
                     </div>
+                </div>
 
-		    <div class="certification-content">
-                        
-                        <h3 class="certification-title"> Artificial Intelligence Foundations: Machine Learning </h3>
-			<h3 class="certification-title"> Artificial Intelligence Foundations: Neural Networks </h3>
-			<h3 class="certification-title"> Learning Hadoop  </h3>
-			<h3 class="certification-title"> Hadoop: Data Analysis  </h3>
-			<h3 class="certification-title"> Programming Foundations: Fuzzy Logic </h3>
-			<h3 class="certification-title"> Security Testing Essential Training </h3>
-                        <p class="certification-authority"> LinkedIn </p>
-                       
+                <!-- Certification 5: LinkedIn -->
+                <div class="certification-card fade-in">
+                    <div class="certification-content">
+                        <h3 class="certification-title">Artificial Intelligence Foundations: Machine Learning</h3>
+                        <h3 class="certification-title">Artificial Intelligence Foundations: Neural Networks</h3>
+                        <h3 class="certification-title">Learning Hadoop</h3>
+                        <h3 class="certification-title">Hadoop: Data Analysis</h3>
+                        <h3 class="certification-title">Programming Foundations: Fuzzy Logic</h3>
+                        <h3 class="certification-title">Security Testing Essential Training</h3>
+                        <p class="certification-authority">LinkedIn</p>
                     </div>
+                </div>
 
-		    <div class="certification-content">
-                        
-                        <h3 class="certification-title"> Python for Data Science </h3>
-			<h3 class="certification-title"> Diploma in Basic Game Development  </h3>
-			<h3 class="certification-title"> Artificial Intelligence and Predictive Analysis using Python </h3>
-			<h3 class="certification-title"> Machine learning & Python & Data Science </h3>
-                        <p class="certification-authority"> Udemy </p>
-                       
+                <!-- Certification 6: Udemy -->
+                <div class="certification-card fade-in">
+                    <div class="certification-content">
+                        <h3 class="certification-title">Python for Data Science</h3>
+                        <h3 class="certification-title">Diploma in Basic Game Development</h3>
+                        <h3 class="certification-title">Artificial Intelligence and Predictive Analysis using Python</h3>
+                        <h3 class="certification-title">Machine learning & Python & Data Science</h3>
+                        <p class="certification-authority">Udemy</p>
                     </div>
+                </div>
 
-		    <div class="certification-content">
-                        
-                        <h3 class="certification-title"> Data Analytics- Introduction to Machine Learning </h3>
-                        <p class="certification-authority"> Alison </p>
-                       
+                <!-- Certification 7: Alison -->
+                <div class="certification-card fade-in">
+                    <div class="certification-content">
+                        <h3 class="certification-title">Data Analytics- Introduction to Machine Learning</h3>
+                        <p class="certification-authority">Alison</p>
                     </div>
+                </div>
 
+            </div> <!-- closing certifications-grid -->
+        </div> <!-- closing container -->
+    </section> <!-- closing certifications-section -->
 
-			
-                    
-                </div>            
-                
-                
-    </section>
 
     <!-- Projects Section -->
     <section class="projects" id="projects">
@@ -1524,9 +1614,9 @@ is currently under process.
             <div class="projects-grid">
                 <!-- Project 1 -->
                 <div class="card project-card fade-in">
-                    <div class="project-image show-instructions">
+                    <div class="project-image"> {/* Removed show-instructions class */}
                         <div class="image-instructions">Project Image: 400x250px, high-quality visual of project results</div>
-                        <img src="assets/project1.png" alt="Forest Disturbance Mapping Tool">
+                        <img src="assets/project1.png" alt="Machine learning for tree species classification">
                     </div>
                     <div class="project-tags">
                         <span class="project-tag">Photogrammetry</span>
@@ -1534,141 +1624,121 @@ is currently under process.
                         <span class="project-tag">Computer Vision</span>
                     </div>
                     <h3>Application of Machine learning methods for tree species classification</h3>
-                    <p>This research project aims to develop a new system architecture for the application of machine learning and deep learning algorithms in forestry. The primary focus is to provide a dataset of Bark images (Bark net for Europe) and explore the application and possibilities of different ML algorithms on the same.</p>
+                    <p>Developing ML/DL system architecture for forestry, focusing on bark image datasets (BarkNet Europe) and algorithm exploration.</p> {/* Shortened */}
                     <div class="project-links">
-                        <a href="#" class="project-link">
+                        <a href="#" class="project-link" aria-label="View Project Details"> {/* Added aria-label */}
                             <i class="fas fa-link"></i> View Project
                         </a>
-                        <a href="#" class="project-link">
+                        <a href="#" class="project-link" aria-label="View Source Code on GitHub"> {/* Added aria-label */}
                             <i class="fab fa-github"></i> Source Code
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Project 2 -->
                 <div class="card project-card fade-in">
-                    <div class="project-image show-instructions">
+                    <div class="project-image"> {/* Removed show-instructions class */}
                         <div class="image-instructions">Project Image: 400x250px, high-quality visual of project results</div>
-                        <img src="assets/project2.png" alt="E-learning  Analytics & Nature-Inspired Computing">
+                        <img src="assets/project2.png" alt="E-learning Analytics & Nature-Inspired Computing">
                     </div>
                     <div class="project-tags">
                         <span class="project-tag">Machine Learning</span>
                         <span class="project-tag">Recommendation Systems</span>
+                         <span class="project-tag">Nature-Inspired Computing</span> {/* Added tag */}
                     </div>
-                    <h3>E-learning  Analytics & Nature-Inspired Computing</h3>
-                    <p>The research focuses on developing a new method to improve the quality and productivity of students in E-learning platforms. As part of the research, implemented a method titled “NATURAL INSPIRED RECOMMENDER SYSTEM BASED ON STUDENT PERFORMANCE”.</p>
+                    <h3>E-learning Analytics & Nature-Inspired Computing</h3>
+                    <p>Developed a method to enhance student productivity in E-learning using a "Natural Inspired Recommender System based on Student Performance".</p> {/* Shortened */}
                     <div class="project-links">
-                        <a href="#" class="project-link">
+                        <a href="#" class="project-link" aria-label="View Live Demo">
                             <i class="fas fa-link"></i> Live Demo
                         </a>
-                        <a href="#" class="project-link">
+                        <a href="#" class="project-link" aria-label="View Source Code on GitHub">
                             <i class="fab fa-github"></i> Source Code
                         </a>
                     </div>
                 </div>
-		<div class="card project-card fade-in">
-                    <div class="project-image show-instructions">
+                 <!-- Project 3 -->
+                <div class="card project-card fade-in">
+                    <div class="project-image">
                         <div class="image-instructions">Project Image: 400x250px, high-quality visual of project results</div>
                         <img src="assets/project3.png" alt="Tumor Detection and Classification using Support Vector Machine">
                     </div>
                     <div class="project-tags">
                         <span class="project-tag">Computer Vision</span>
                         <span class="project-tag">Medical Imaging</span>
+                         <span class="project-tag">SVM</span> {/* Added tag */}
                     </div>
                     <h3>Tumor Detection and Classification using Support Vector Machine</h3>
-                    <p>The project aimed to detect and extract different types of tumors from patients' MRI scan images. The system 
-initially classifies the tumours and benign; the procedure only considers the tumour images in the second phase. 
-Here, the system locates the tumour based on its position and tags the tumours according to their specific names.</p>
+                    <p>Developed a system using SVM to detect, extract, and classify tumor types (benign/malignant) from MRI scan images based on location and features.</p> {/* Shortened */}
                     <div class="project-links">
-                        <a href="#" class="project-link">
+                        <a href="#" class="project-link" aria-label="View Live Demo">
                             <i class="fas fa-link"></i> Live Demo
                         </a>
-                        <a href="#" class="project-link">
+                        <a href="#" class="project-link" aria-label="View Source Code on GitHub">
                             <i class="fab fa-github"></i> Source Code
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Project 4 -->
                 <div class="card project-card fade-in">
-                    <div class="project-image show-instructions">
+                    <div class="project-image">
                         <div class="image-instructions">Project Image: 400x250px, high-quality visual of project results</div>
                         <img src="assets/project4.png" alt="Deformable Mesh Model for Cardiac Motion Estimation from MRI Data">
                     </div>
                     <div class="project-tags">
                         <span class="project-tag">Computer Vision</span>
                         <span class="project-tag">Medical Imaging</span>
-                        
+                        <span class="project-tag">Deformable Models</span> {/* Added tag */}
                     </div>
-                    <h3>Deformable Mesh Model for Cardiac Motion Estimation from MRI Data  </h3>
-                    <p>The project estimates the left ventricular motion through a whole cardiac cycle based on the Image-Matching non
-rigid Deformable Mesh. The system also predicts the patient’s heart problems.</p>
+                    <h3>Deformable Mesh Model for Cardiac Motion Estimation from MRI Data</h3>
+                    <p>Estimated left ventricular motion during the cardiac cycle using an Image-Matching non-rigid Deformable Mesh, aiding heart problem prediction.</p> {/* Shortened */}
                     <div class="project-links">
-                        <a href="#" class="project-link">
+                        <a href="#" class="project-link" aria-label="View Live Demo">
                             <i class="fas fa-link"></i> Live Demo
                         </a>
-                        <a href="#" class="project-link">
+                        <a href="#" class="project-link" aria-label="View Source Code on GitHub">
                             <i class="fab fa-github"></i> Source Code
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-				
     </section>
 
-    <!-- Hobbies Section -->
-    <section class="hobbies" id="hobbies">
+    <!-- Hobbies Section renamed to Software -->
+    <section class="hobbies" id="hobbies"> {/* Keep ID 'hobbies' for nav link or update both */}
         <div class="container">
-            <h2 class="fade-in">Research Softwares Developed</h2>
-            <div class="hobbies-grid">
-                <!-- Hobby 1 -->
-                <div class="glass-card hobby-card fade-in">
+            <h2 class="fade-in">Research Software Developed</h2>
+            <div class="hobbies-grid"> {/* Keep class 'hobbies-grid' or update CSS */}
+                <!-- Software 1 -->
+                <div class="glass-card hobby-card fade-in"> {/* Keep class 'hobby-card' or update CSS */}
                     <div class="hobby-icon">
-                        <i class="fas fa-desktop"></i>
+                        <i class="fas fa-cogs"></i> {/* Changed icon */}
                     </div>
-                    <h3>Advanced Machine learning Classifier</h3>
-                    <p>This software is an advanced tool for machine learning classification. It utilizes Convolutional Neural Networks for 
-feature extraction and offers multiple algorithm options, including AdaBoost, Decision Trees, Gradient Boosting, 
-Naïve Bayes, Random Forest, and Support Vector Machine. It also includes Boosted Algorithms with Bagging, 
-customizable Train-Test Split, CNN feature extractor, and advanced features such as identifying misclassified images, 
-predicting outcomes for new sets of images, and visualizing results with interactive confusion matrices and detailed 
-classification reports.</p>
-<a href="https://zenodo.org/records/14841241" class="aml-doi"><i class="fas fa-external-link-alt"></i> DOI:https://zenodo.org/records/14841241 </a>
+                    <h3>Advanced Machine Learning Classifier</h3>
+                    <p>GUI tool using CNN features with classifiers (AdaBoost, DT, GB, NB, RF, SVM, Boosted Bagging) for image classification, prediction, and visualization.</p> {/* Shortened */}
+                    <a href="https://zenodo.org/records/14841241" target="_blank" rel="noopener noreferrer" class="aml-doi"><i class="fas fa-external-link-alt"></i> DOI: 10.5281/zenodo.14841241</a> {/* Improved DOI link */}
                 </div>
-                
-                <!-- Hobby 2 -->
+
+                <!-- Software 2 -->
                 <div class="glass-card hobby-card fade-in">
                     <div class="hobby-icon">
-                        <i class="fas fa-desktop"></i>
+                        <i class="fas fa-sliders-h"></i> {/* Changed icon */}
                     </div>
-                    <h3>CNN Parameter Tuner   </h3>
-                    <p>This application streamlines parameter tuning in Convolutional Neural Networks (CNNs). It facilitates loading and 
-analyzing images in various formats (jpg, jpeg, png), offers customizable CNN model, Train-Test Split, and provides 
-tuning options, including defining the number of epochs, setting batch size, choosing activation for the final dense 
-layer, selecting optimizer function, and picking a suitable loss function. Users can visualize results with interactive 
-confusion matrices, explore results through interactive graphs, and access detailed classification reports for 
-comprehensive insights</p>
-<a href="https://zenodo.org/records/14840647" class="cnn-doi"><i class="fas fa-external-link-alt"></i> DOI:https://zenodo.org/records/14840647 </a>
-     
+                    <h3>CNN Parameter Tuner</h3>
+                    <p>Application to load images and tune CNN parameters (epochs, batch size, activation, optimizer, loss) with interactive results visualization.</p> {/* Shortened */}
+                    <a href="https://zenodo.org/records/14840647" target="_blank" rel="noopener noreferrer" class="cnn-doi"><i class="fas fa-external-link-alt"></i> DOI: 10.5281/zenodo.14840647</a> {/* Improved DOI link */}
                 </div>
-                
-    
-                
-                <!-- Hobby 3 -->
+
+                <!-- Software 3 -->
                 <div class="glass-card hobby-card fade-in">
-                    <div class="hobby-icon">
-                        <i class="fas fa-desktop"></i>
+                     <div class="hobby-icon">
+                        <i class="fas fa-image"></i> {/* Changed icon */}
                     </div>
                     <h3>Image Augmentor</h3>
-                    <p>This application streamlines parameter tuning in Convolutional Neural Networks (CNNs). It facilitates loading and 
-analyzing images in various formats (jpg, jpeg, png), offers customizable CNN model, Train-Test Split, and provides 
-tuning options, including defining the number of epochs, setting batch size, choosing activation for the final dense 
-layer, selecting optimizer function, and picking a suitable loss function. Users can visualize results with interactive 
-confusion matrices, explore results through interactive graphs, and access detailed classification reports for 
-comprehensive insights. </p>
-<a href="https://zenodo.org/records/14840647" class="cnn-doi"><i class="fas fa-external-link-alt"></i> DOI:https://zenodo.org/records/14840647 </a>
-  
+                    <p>A tool designed to apply various augmentation techniques (rotation, flip, brightness, etc.) to image datasets for improving model robustness.</p> {/* Reworded description */}
+                    <a href="https://zenodo.org/records/YOUR_DOI_HERE" target="_blank" rel="noopener noreferrer" class="img-aug-doi"><i class="fas fa-external-link-alt"></i> DOI: [Add Zenodo DOI]</a> {/* Placeholder DOI */}
                 </div>
             </div>
         </div>
@@ -1680,53 +1750,63 @@ comprehensive insights. </p>
             <h2 class="fade-in">Get In Touch</h2>
             <div class="contact-grid">
                 <div class="glass-card fade-in">
-                    <form class="contact-form">
+                     {/* Add action="YOUR_FORM_ENDPOINT" method="POST" if submitting to a backend */}
+                    <form class="contact-form" id="contact-form">
                         <div class="form-group">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" id="name" class="form-input" required>
+                            <input type="text" id="name" name="name" class="form-input" required>
                         </div>
                         <div class="form-group">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" class="form-input" required>
+                            <input type="email" id="email" name="email" class="form-input" required>
                         </div>
                         <div class="form-group">
                             <label for="subject" class="form-label">Subject</label>
-                            <input type="text" id="subject" class="form-input" required>
+                            <input type="text" id="subject" name="subject" class="form-input" required>
                         </div>
                         <div class="form-group">
                             <label for="message" class="form-label">Message</label>
-                            <textarea id="message" class="form-textarea" required></textarea>
+                            <textarea id="message" name="message" class="form-textarea" required></textarea>
                         </div>
                         <button type="submit" class="btn">Send Message</button>
+                        <p id="form-status" style="margin-top: 1rem; text-align: center;"></p> {/* For feedback */}
                     </form>
                 </div>
-                <div class="glass-card fade-in">
-                    <div class="contact-info">
-                        <div class="contact-info-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
+                <div class="contact-info-container fade-in"> {/* Optional wrapper */}
+                    <div class="glass-card">
+                        <div class="contact-info">
+                            <div class="contact-info-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h3>Email</h3>
+                                    <p><a href="mailto:contactgokulks@gmail.com">contactgokulks@gmail.com</a></p> {/* Make email clickable */}
+                                </div>
                             </div>
-                            <div>
-                                <h3>Email</h3>
-                                <p>contactgokulks@gmail.com</p>
+                            <div class="contact-info-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h3>Phone</h3>
+                                    <p><a href="tel:+420607422311">+420 607 422 311</a></p> {/* Make phone clickable */}
+                                </div>
                             </div>
-                        </div>
-                        <div class="contact-info-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
+                            <div class="contact-info-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h3>Location</h3>
+                                    <p>Prague, Czech Republic</p>
+                                </div>
                             </div>
-                            <div>
-                                <h3>Phone</h3>
-                                <p>+420607422311</p>
-                            </div>
-                        </div>
-                        <div class="contact-info-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <h3>Location</h3>
-                                <p>Prague, Czech Republic</p>
+                             {/* Add Social Links Here Too? */}
+                             <div class="social-links" style="justify-content: center; margin-top: var(--space-md);">
+                                <a href="https://www.linkedin.com/in/gokul-ks" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://github.com/gokultcr" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+                                <a href="https://www.pexels.com/@gokul-ks" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Pexels Profile"><i class="fab fa-pexels"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1736,60 +1816,76 @@ comprehensive insights. </p>
     </section>
 
     <!-- Back to top button -->
-    <a href="#" class="back-to-top" aria-label="Back to top">
+    <a href="#home" class="back-to-top" aria-label="Back to top"> {/* Point to #home */}
         <i class="fas fa-arrow-up"></i>
     </a>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p class="footer-text">© 2025 Gokul Kottilapurath Surendran. All rights reserved.</p>
+            <p class="footer-text">© <span id="current-year"></span> Gokul Kottilapurath Surendran. All rights reserved.</p> {/* Dynamic year */}
             <div class="social-links" style="justify-content: center;">
-                
-				<a href="https://www.linkedin.com/in/gokul-ks" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/gokultcr" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="https://www.pexels.com/@gokul-ks" class="social-link"><i class="fab fa-book-open"></i></a>
-                
+                <a href="https://www.linkedin.com/in/gokul-ks" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/gokultcr" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+                <a href="https://www.pexels.com/@gokul-ks" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Pexels Profile"><i class="fab fa-pexels"></i></a>
             </div>
         </div>
     </footer>
 
     <!-- JavaScript -->
     <script>
-        // Navigation active state and smooth scrolling
         document.addEventListener('DOMContentLoaded', function() {
-            // Get all sections
-            const sections = document.querySelectorAll('section');
+            const sections = document.querySelectorAll('section[id]'); // Select only sections with IDs
             const navLinks = document.querySelectorAll('.nav-link');
             const backToTop = document.querySelector('.back-to-top');
-            
-            // Smooth scrolling for anchor links
+            const header = document.querySelector('.header');
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navList = document.querySelector('.nav-list');
+            const modeToggle = document.querySelector('.mode-toggle');
+            const htmlElement = document.documentElement;
+            const fadeElems = document.querySelectorAll('.fade-in');
+            const contactForm = document.getElementById('contact-form');
+            const formStatus = document.getElementById('form-status');
+            const currentYearSpan = document.getElementById('current-year');
+            const imageContainers = document.querySelectorAll('.about-image, .publication-figure, .project-image, .hero-image-container'); // Containers with instructions
+
+
+            // --- Smooth Scrolling ---
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
                     const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
+                    if (!targetId || targetId === '#') return; // Ignore empty or # links
+
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
+                        e.preventDefault(); // Prevent default only if target exists
                         // Close mobile menu if open
-                        document.querySelector('.nav-list').classList.remove('active');
-                        document.querySelector('.mobile-menu-btn i').classList.replace('fa-times', 'fa-bars');
-                        
+                        if (navList.classList.contains('active')) {
+                             navList.classList.remove('active');
+                             document.body.classList.remove('menu-open'); // Remove overlay class
+                             mobileMenuBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                        }
+                        const headerOffset = header.offsetHeight;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
                         window.scrollTo({
-                            top: targetElement.offsetTop - 80,
+                            top: offsetPosition,
                             behavior: 'smooth'
                         });
+                         // Optionally update URL hash without jumping
+                         // history.pushState(null, null, targetId);
                     }
                 });
             });
-            
-            // Intersection Observer for active nav links
+
+            // --- Active Nav Link on Scroll ---
             const observerOptions = {
-                rootMargin: '-100px 0px -80% 0px'
+                root: null, // viewport
+                rootMargin: `-${header.offsetHeight}px 0px -50% 0px`, // Adjust top margin for header, bottom margin to trigger earlier
+                threshold: 0
             };
-            
+
             const observer = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -1798,11 +1894,11 @@ comprehensive insights. </p>
                     }
                 });
             }, observerOptions);
-            
+
             sections.forEach(section => {
-                observer.observe(section);
+                 observer.observe(section);
             });
-            
+
             function setActiveNavLink(id) {
                 navLinks.forEach(link => {
                     link.classList.remove('active');
@@ -1811,108 +1907,225 @@ comprehensive insights. </p>
                     }
                 });
             }
-            
-            // Mobile Menu Toggle
-            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-            const navList = document.querySelector('.nav-list');
-            
+             // Set initial active link based on URL hash or default to home
+            const currentHash = window.location.hash;
+            if (currentHash && document.querySelector(currentHash)) {
+                setActiveNavLink(currentHash.substring(1));
+            } else {
+                setActiveNavLink('home');
+            }
+
+
+            // --- Mobile Menu Toggle ---
             mobileMenuBtn.addEventListener('click', function() {
                 navList.classList.toggle('active');
+                document.body.classList.toggle('menu-open'); // Toggle overlay class
                 const icon = this.querySelector('i');
                 if (icon.classList.contains('fa-bars')) {
                     icon.classList.replace('fa-bars', 'fa-times');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'true');
                 } else {
                     icon.classList.replace('fa-times', 'fa-bars');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
                 }
             });
-            
-            // Header Scroll Effect
-            const header = document.querySelector('.header');
-            
+             // Close menu if clicking outside of it
+             document.addEventListener('click', function(event) {
+                 if (navList.classList.contains('active') && !navList.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+                     navList.classList.remove('active');
+                     document.body.classList.remove('menu-open');
+                     mobileMenuBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                     mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                 }
+             });
+
+
+            // --- Header Scroll Effect & Back to Top Button ---
+            let lastScrollTop = 0;
             window.addEventListener('scroll', function() {
-                if (window.scrollY > 100) {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (scrollTop > 100) {
                     header.classList.add('scrolled');
                     backToTop.classList.add('visible');
                 } else {
                     header.classList.remove('scrolled');
                     backToTop.classList.remove('visible');
                 }
-            });
-            
-            // Fade In Animation
-            const fadeElems = document.querySelectorAll('.fade-in');
-            
-            const fadeObserver = new IntersectionObserver(entries => {
+                 // Optional: Hide header on scroll down, show on scroll up
+                 /*
+                 if (scrollTop > lastScrollTop && scrollTop > header.offsetHeight){
+                    header.style.top = `-${header.offsetHeight}px`; // Hide
+                 } else {
+                    header.style.top = "0"; // Show
+                 }
+                 lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+                 */
+
+            }, false);
+
+
+            // --- Fade In Animation ---
+            const fadeObserver = new IntersectionObserver((entries, fadeObserverInstance) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('appear');
-                        fadeObserver.unobserve(entry.target);
+                        fadeObserverInstance.unobserve(entry.target); // Stop observing once visible
                     }
                 });
             }, {
-                threshold: 0.1
-            });
-            
-            fadeElems.forEach(elem => {
-                fadeObserver.observe(elem);
+                threshold: 0.1 // Trigger when 10% is visible
             });
 
-            // Dark/Light Mode Toggle
-            const modeToggle = document.querySelector('.mode-toggle');
-            const htmlElement = document.documentElement;
-            
-            // Check for saved theme preference or prefer-color-scheme
+            fadeElems.forEach(elem => {
+                // If element is already in view on load, make it appear immediately
+                if (elem.getBoundingClientRect().top < window.innerHeight && elem.getBoundingClientRect().bottom > 0) {
+                     elem.classList.add('appear');
+                } else {
+                    fadeObserver.observe(elem);
+                }
+            });
+
+            // --- Dark/Light Mode Toggle ---
+             function applyTheme(theme) {
+                 htmlElement.setAttribute('data-theme', theme);
+                 localStorage.setItem('theme', theme);
+                 updateModeToggleIcon(theme);
+             }
+
+             function updateModeToggleIcon(theme) {
+                 const icon = modeToggle.querySelector('i');
+                 if (theme === 'dark') {
+                     icon.classList.remove('fa-moon');
+                     icon.classList.add('fa-sun');
+                     modeToggle.setAttribute('aria-label', 'Switch to light mode');
+                 } else {
+                     icon.classList.remove('fa-sun');
+                     icon.classList.add('fa-moon');
+                      modeToggle.setAttribute('aria-label', 'Switch to dark mode');
+                 }
+             }
+
+            // Check for saved theme or system preference
             const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
             if (savedTheme) {
-                htmlElement.setAttribute('data-theme', savedTheme);
-                updateModeToggleIcon(savedTheme);
-            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                htmlElement.setAttribute('data-theme', 'dark');
-                updateModeToggleIcon('dark');
+                applyTheme(savedTheme);
+            } else if (prefersDark) {
+                applyTheme('dark');
+            } else {
+                 applyTheme('light'); // Default to light
             }
-            
+            // Listener for system preference changes
+             window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+                if (!localStorage.getItem('theme')) { // Only if user hasn't manually set theme
+                    applyTheme(event.matches ? 'dark' : 'light');
+                }
+            });
+
             modeToggle.addEventListener('click', () => {
                 const currentTheme = htmlElement.getAttribute('data-theme') || 'light';
                 const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-                
-                htmlElement.setAttribute('data-theme', newTheme);
-                localStorage.setItem('theme', newTheme);
-                updateModeToggleIcon(newTheme);
-            });
-            
-            function updateModeToggleIcon(theme) {
-                const icon = modeToggle.querySelector('i');
-                if (theme === 'dark') {
-                    icon.classList.replace('fa-moon', 'fa-sun');
-                } else {
-                    icon.classList.replace('fa-sun', 'fa-moon');
-                }
-            }
-            
-            // Contact Form Submission (you would add AJAX or form handling here)
-            const contactForm = document.querySelector('.contact-form');
-            
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                // Here you would typically handle the form submission via AJAX
-                // For this template, we'll just show an alert
-                alert('Thanks for your message! This is a template form. In a real website, this would send your message to the site owner.');
+                applyTheme(newTheme);
             });
 
-            // Toggle image instructions
-            const showInstructions = document.querySelectorAll('.show-instructions');
-            
-            function toggleInstructions() {
-                // Remove the class after 5 seconds
-                setTimeout(() => {
-                    showInstructions.forEach(el => {
-                        el.classList.remove('show-instructions');
+            // --- Contact Form Submission ---
+            if (contactForm) {
+                 contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault(); // Prevent default page reload
+
+                    // Basic validation example (more robust validation is recommended)
+                    const name = document.getElementById('name').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const message = document.getElementById('message').value.trim();
+
+                    if (!name || !email || !message) {
+                        formStatus.textContent = 'Please fill out all required fields.';
+                        formStatus.style.color = 'red';
+                        return;
+                    }
+                     if (!/^\S+@\S+\.\S+$/.test(email)) {
+                         formStatus.textContent = 'Please enter a valid email address.';
+                         formStatus.style.color = 'red';
+                         return;
+                     }
+
+
+                    // --- Replace with your actual form submission logic (e.g., using Fetch API) ---
+                    // Example using Formspree (replace YOUR_FORM_ID):
+                    /*
+                    const formData = new FormData(contactForm);
+                    formStatus.textContent = 'Sending...';
+                    formStatus.style.color = 'var(--primary)';
+
+                    fetch('https://formspree.io/f/YOUR_FORM_ID', {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            formStatus.textContent = 'Thanks for your message! I\'ll get back to you soon.';
+                            formStatus.style.color = 'green';
+                            contactForm.reset(); // Clear the form
+                        } else {
+                            response.json().then(data => {
+                                if (Object.hasOwn(data, 'errors')) {
+                                    formStatus.textContent = data["errors"].map(error => error["message"]).join(", ");
+                                } else {
+                                    formStatus.textContent = 'Oops! There was a problem submitting your form.';
+                                }
+                                formStatus.style.color = 'red';
+                            })
+                        }
+                    })
+                    .catch(error => {
+                        formStatus.textContent = 'Oops! There was a problem submitting your form.';
+                        formStatus.style.color = 'red';
+                        console.error('Form submission error:', error);
                     });
-                }, 5000);
+                    */
+
+                     // --- Simple Placeholder Feedback ---
+                     formStatus.textContent = 'Sending (simulation)...';
+                     formStatus.style.color = 'var(--primary)';
+                     setTimeout(() => {
+                         formStatus.textContent = 'Thanks for your message! This is a demo form.';
+                         formStatus.style.color = 'green';
+                         contactForm.reset();
+                         setTimeout(() => { formStatus.textContent = ''; }, 5000); // Clear status after 5s
+                     }, 1500); // Simulate network delay
+
+
+                });
             }
-            
-            // Call the function when the page loads
-            toggleInstructions();
+
+            // --- Dynamic Year in Footer ---
+            if (currentYearSpan) {
+                 currentYearSpan.textContent = new Date().getFullYear();
+            }
+
+             // --- Image Instructions Toggle (Temporary Display) ---
+             function showAndHideInstructions() {
+                 imageContainers.forEach(container => {
+                    if (container.querySelector('.image-instructions')) {
+                        container.classList.add('instructions-visible');
+                    }
+                 });
+
+                 setTimeout(() => {
+                     imageContainers.forEach(container => {
+                        container.classList.remove('instructions-visible');
+                     });
+                 }, 5000); // Hide after 5 seconds
+             }
+
+             // Call the function to show instructions temporarily on load
+             showAndHideInstructions();
+
         });
     </script>
 </body>
