@@ -2095,6 +2095,7 @@ developed the front end of this Python-based web application, hosted it, and cur
                         // Success
                         formStatus.textContent = 'Thanks for your message! I\'ll get back to you soon.';
                         formStatus.style.color = 'green';
+			contactForm.reset(); // Clear the form
                         contactForm.reset(); // Clear the form
                         setTimeout(() => { formStatus.style.display = 'none'; formStatus.textContent = ''; }, 5000); // Hide after 5s
                     } else {
@@ -2119,11 +2120,7 @@ developed the front end of this Python-based web application, hosted it, and cur
                     formStatus.style.color = 'red';
                 });
 
-                // --- REMOVED the old simulation code ---
-                /*
-                 formStatus.textContent = 'Sending (simulation)...';
-                 // ... rest of old simulation timeout ...
-                */
+                
             });
         }
         // --- **** End of Contact Form Submission Modification **** ---
