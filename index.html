@@ -1877,299 +1877,282 @@ developed the front end of this Python-based web application, hosted it, and cur
 
     <!-- JavaScript -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('section[id]'); // Select only sections with IDs
-            const navLinks = document.querySelectorAll('.nav-link');
-            const backToTop = document.querySelector('.back-to-top');
-            const header = document.querySelector('.header');
-            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-            const navList = document.querySelector('.nav-list');
-            const modeToggle = document.querySelector('.mode-toggle');
-            const htmlElement = document.documentElement;
-            const fadeElems = document.querySelectorAll('.fade-in');
-            const contactForm = document.getElementById('contact-form');
-            const formStatus = document.getElementById('form-status');
-            const currentYearSpan = document.getElementById('current-year');
-            const imageContainers = document.querySelectorAll('.about-image, .publication-figure, .project-image, .hero-image-container'); // Containers with instructions
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const backToTop = document.querySelector('.back-to-top');
+        const header = document.querySelector('.header');
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navList = document.querySelector('.nav-list');
+        const modeToggle = document.querySelector('.mode-toggle');
+        const htmlElement = document.documentElement;
+        const fadeElems = document.querySelectorAll('.fade-in');
+        const contactForm = document.getElementById('contact-form'); // Your form element
+        const formStatus = document.getElementById('form-status');   // The <p> tag for messages
+        const currentYearSpan = document.getElementById('current-year');
+        const imageContainers = document.querySelectorAll('.about-image, .publication-figure, .project-image, .hero-image-container');
 
+        // --- Smooth Scrolling ---
+        // (Keep this section as is)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (!targetId || targetId === '#') return;
 
-            // --- Smooth Scrolling ---
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    const targetId = this.getAttribute('href');
-                    if (!targetId || targetId === '#') return; // Ignore empty or # links
-
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        e.preventDefault(); // Prevent default only if target exists
-                        // Close mobile menu if open
-                        if (navList.classList.contains('active')) {
-                             navList.classList.remove('active');
-                             document.body.classList.remove('menu-open'); // Remove overlay class
-                             mobileMenuBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
-                        }
-                        const headerOffset = header.offsetHeight;
-                        const elementPosition = targetElement.getBoundingClientRect().top;
-                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                        window.scrollTo({
-                            top: offsetPosition,
-                            behavior: 'smooth'
-                        });
-                         // Optionally update URL hash without jumping
-                         // history.pushState(null, null, targetId);
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    if (navList.classList.contains('active')) {
+                         navList.classList.remove('active');
+                         document.body.classList.remove('menu-open');
+                         mobileMenuBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                         mobileMenuBtn.setAttribute('aria-expanded', 'false'); // Set aria-expanded on close
                     }
-                });
-            });
+                    const headerOffset = header.offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-            // --- Active Nav Link on Scroll ---
-            const observerOptions = {
-                root: null, // viewport
-                rootMargin: `-${header.offsetHeight}px 0px -50% 0px`, // Adjust top margin for header, bottom margin to trigger earlier
-                threshold: 0
-            };
-
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const activeId = entry.target.id;
-                        setActiveNavLink(activeId);
-                    }
-                });
-            }, observerOptions);
-
-            sections.forEach(section => {
-                 observer.observe(section);
-            });
-
-            function setActiveNavLink(id) {
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${id}`) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-             // Set initial active link based on URL hash or default to home
-            const currentHash = window.location.hash;
-            if (currentHash && document.querySelector(currentHash)) {
-                setActiveNavLink(currentHash.substring(1));
-            } else {
-                setActiveNavLink('home');
-            }
-
-
-            // --- Mobile Menu Toggle ---
-            mobileMenuBtn.addEventListener('click', function() {
-                navList.classList.toggle('active');
-                document.body.classList.toggle('menu-open'); // Toggle overlay class
-                const icon = this.querySelector('i');
-                if (icon.classList.contains('fa-bars')) {
-                    icon.classList.replace('fa-bars', 'fa-times');
-                    mobileMenuBtn.setAttribute('aria-expanded', 'true');
-                } else {
-                    icon.classList.replace('fa-times', 'fa-bars');
-                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
                 }
             });
-             // Close menu if clicking outside of it
-             document.addEventListener('click', function(event) {
-                 if (navList.classList.contains('active') && !navList.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
-                     navList.classList.remove('active');
-                     document.body.classList.remove('menu-open');
-                     mobileMenuBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
-                     mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        });
+
+        // --- Active Nav Link on Scroll ---
+        // (Keep this section as is)
+        const observerOptions = {
+            root: null,
+            rootMargin: `-${header.offsetHeight}px 0px -50% 0px`,
+            threshold: 0
+        };
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    setActiveNavLink(activeId);
+                }
+            });
+        }, observerOptions);
+        sections.forEach(section => {
+             observer.observe(section);
+        });
+        function setActiveNavLink(id) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${id}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        const currentHash = window.location.hash;
+        if (currentHash && document.querySelector(currentHash)) {
+            setActiveNavLink(currentHash.substring(1));
+        } else {
+            setActiveNavLink('home');
+        }
+
+        // --- Mobile Menu Toggle ---
+        // (Keep this section as is, added aria-expanded)
+        mobileMenuBtn.addEventListener('click', function() {
+            navList.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+            const icon = this.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.replace('fa-bars', 'fa-times');
+                mobileMenuBtn.setAttribute('aria-expanded', 'true');
+            } else {
+                icon.classList.replace('fa-times', 'fa-bars');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+        document.addEventListener('click', function(event) {
+             if (navList.classList.contains('active') && !navList.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+                 navList.classList.remove('active');
+                 document.body.classList.remove('menu-open');
+                 mobileMenuBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                 mobileMenuBtn.setAttribute('aria-expanded', 'false');
+             }
+         });
+
+        // --- Header Scroll Effect & Back to Top Button ---
+        // (Keep this section as is)
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > 100) {
+                header.classList.add('scrolled');
+                backToTop.classList.add('visible');
+            } else {
+                header.classList.remove('scrolled');
+                backToTop.classList.remove('visible');
+            }
+        }, false);
+
+        // --- Fade In Animation ---
+        // (Keep this section as is)
+        const fadeObserver = new IntersectionObserver((entries, fadeObserverInstance) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                    fadeObserverInstance.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        fadeElems.forEach(elem => {
+            if (elem.getBoundingClientRect().top < window.innerHeight && elem.getBoundingClientRect().bottom > 0) {
+                 elem.classList.add('appear');
+            } else {
+                fadeObserver.observe(elem);
+            }
+        });
+
+        // --- Dark/Light Mode Toggle ---
+        // (Keep this section as is, added aria-label updates)
+         function applyTheme(theme) {
+             htmlElement.setAttribute('data-theme', theme);
+             localStorage.setItem('theme', theme);
+             updateModeToggleIcon(theme);
+         }
+         function updateModeToggleIcon(theme) {
+             const icon = modeToggle.querySelector('i');
+             if (theme === 'dark') {
+                 icon.classList.remove('fa-moon');
+                 icon.classList.add('fa-sun');
+                 modeToggle.setAttribute('aria-label', 'Switch to light mode'); // Update aria-label
+             } else {
+                 icon.classList.remove('fa-sun');
+                 icon.classList.add('fa-moon');
+                 modeToggle.setAttribute('aria-label', 'Switch to dark mode'); // Update aria-label
+             }
+         }
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme) {
+            applyTheme(savedTheme);
+        } else if (prefersDark) {
+            applyTheme('dark');
+        } else {
+             applyTheme('light');
+        }
+         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (!localStorage.getItem('theme')) {
+                applyTheme(event.matches ? 'dark' : 'light');
+            }
+        });
+        modeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme') || 'light';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            applyTheme(newTheme);
+        });
+
+
+        // --- **** Contact Form Submission (MODIFIED SECTION) **** ---
+        if (contactForm) {
+             contactForm.addEventListener('submit', function(e) {
+                e.preventDefault(); // Prevent default page reload
+
+                // --- Basic validation (added subject) ---
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const subject = document.getElementById('subject').value.trim(); // Get subject
+                const message = document.getElementById('message').value.trim();
+
+                // Updated validation check
+                if (!name || !email || !subject || !message) {
+                    formStatus.textContent = 'Please fill out all required fields.';
+                    formStatus.style.color = 'red';
+                    formStatus.style.display = 'block'; // Make sure it's visible
+                    return;
+                }
+                 if (!/^\S+@\S+\.\S+$/.test(email)) {
+                     formStatus.textContent = 'Please enter a valid email address.';
+                     formStatus.style.color = 'red';
+                     formStatus.style.display = 'block'; // Make sure it's visible
+                     return;
                  }
+                // --- End Validation ---
+
+
+                // --- Actual AJAX submission using Fetch ---
+                const formData = new FormData(contactForm); // Collects data from the form
+                formStatus.textContent = 'Sending...';
+                formStatus.style.color = 'var(--primary)';
+                formStatus.style.display = 'block'; // Make status visible
+
+                // Fetch uses the 'action' and 'method' attributes from your HTML form tag
+                fetch(contactForm.action, {
+                    method: contactForm.method,
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json' // Request JSON response from Formspree
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Success
+                        formStatus.textContent = 'Thanks for your message! I\'ll get back to you soon.';
+                        formStatus.style.color = 'green';
+                        contactForm.reset(); // Clear the form
+                        setTimeout(() => { formStatus.style.display = 'none'; formStatus.textContent = ''; }, 5000); // Hide after 5s
+                    } else {
+                        // Server error (e.g., Formspree issue)
+                        response.json().then(data => {
+                            if (Object.hasOwn(data, 'errors')) {
+                                formStatus.textContent = data["errors"].map(error => error["message"]).join(", ");
+                            } else {
+                                formStatus.textContent = 'Oops! There was a problem submitting your form. Please try again.';
+                            }
+                            formStatus.style.color = 'red';
+                        }).catch(error => {
+                            formStatus.textContent = 'Oops! There was a problem submitting your form. Please try again.';
+                            formStatus.style.color = 'red';
+                        });
+                    }
+                })
+                .catch(error => {
+                    // Network error
+                    console.error('Form submission error:', error);
+                    formStatus.textContent = 'Network error. Please check your connection and try again.';
+                    formStatus.style.color = 'red';
+                });
+
+                // --- REMOVED the old simulation code ---
+                /*
+                 formStatus.textContent = 'Sending (simulation)...';
+                 // ... rest of old simulation timeout ...
+                */
+            });
+        }
+        // --- **** End of Contact Form Submission Modification **** ---
+
+
+        // --- Dynamic Year in Footer ---
+        // (Keep this section as is)
+        if (currentYearSpan) {
+             currentYearSpan.textContent = new Date().getFullYear();
+        }
+
+         // --- Image Instructions Toggle (Temporary Display) ---
+         // (Keep this section as is)
+         function showAndHideInstructions() {
+             imageContainers.forEach(container => {
+                if (container.querySelector('.image-instructions')) {
+                    container.classList.add('instructions-visible');
+                }
              });
 
-
-            // --- Header Scroll Effect & Back to Top Button ---
-            let lastScrollTop = 0;
-            window.addEventListener('scroll', function() {
-                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-                if (scrollTop > 100) {
-                    header.classList.add('scrolled');
-                    backToTop.classList.add('visible');
-                } else {
-                    header.classList.remove('scrolled');
-                    backToTop.classList.remove('visible');
-                }
-                 // Optional: Hide header on scroll down, show on scroll up
-                 /*
-                 if (scrollTop > lastScrollTop && scrollTop > header.offsetHeight){
-                    header.style.top = `-${header.offsetHeight}px`; // Hide
-                 } else {
-                    header.style.top = "0"; // Show
-                 }
-                 lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-                 */
-
-            }, false);
-
-
-            // --- Fade In Animation ---
-            const fadeObserver = new IntersectionObserver((entries, fadeObserverInstance) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('appear');
-                        fadeObserverInstance.unobserve(entry.target); // Stop observing once visible
-                    }
-                });
-            }, {
-                threshold: 0.1 // Trigger when 10% is visible
-            });
-
-            fadeElems.forEach(elem => {
-                // If element is already in view on load, make it appear immediately
-                if (elem.getBoundingClientRect().top < window.innerHeight && elem.getBoundingClientRect().bottom > 0) {
-                     elem.classList.add('appear');
-                } else {
-                    fadeObserver.observe(elem);
-                }
-            });
-
-            // --- Dark/Light Mode Toggle ---
-             function applyTheme(theme) {
-                 htmlElement.setAttribute('data-theme', theme);
-                 localStorage.setItem('theme', theme);
-                 updateModeToggleIcon(theme);
-             }
-
-             function updateModeToggleIcon(theme) {
-                 const icon = modeToggle.querySelector('i');
-                 if (theme === 'dark') {
-                     icon.classList.remove('fa-moon');
-                     icon.classList.add('fa-sun');
-                     modeToggle.setAttribute('aria-label', 'Switch to light mode');
-                 } else {
-                     icon.classList.remove('fa-sun');
-                     icon.classList.add('fa-moon');
-                      modeToggle.setAttribute('aria-label', 'Switch to dark mode');
-                 }
-             }
-
-            // Check for saved theme or system preference
-            const savedTheme = localStorage.getItem('theme');
-            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-            if (savedTheme) {
-                applyTheme(savedTheme);
-            } else if (prefersDark) {
-                applyTheme('dark');
-            } else {
-                 applyTheme('light'); // Default to light
-            }
-            // Listener for system preference changes
-             window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-                if (!localStorage.getItem('theme')) { // Only if user hasn't manually set theme
-                    applyTheme(event.matches ? 'dark' : 'light');
-                }
-            });
-
-            modeToggle.addEventListener('click', () => {
-                const currentTheme = htmlElement.getAttribute('data-theme') || 'light';
-                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-                applyTheme(newTheme);
-            });
-
-            // --- Contact Form Submission ---
-            if (contactForm) {
-                 contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault(); // Prevent default page reload
-
-                    // Basic validation example (more robust validation is recommended)
-                    const name = document.getElementById('name').value.trim();
-                    const email = document.getElementById('email').value.trim();
-                    const message = document.getElementById('message').value.trim();
-
-                    if (!name || !email || !message) {
-                        formStatus.textContent = 'Please fill out all required fields.';
-                        formStatus.style.color = 'red';
-                        return;
-                    }
-                     if (!/^\S+@\S+\.\S+$/.test(email)) {
-                         formStatus.textContent = 'Please enter a valid email address.';
-                         formStatus.style.color = 'red';
-                         return;
-                     }
-
-
-                    // --- Replace with your actual form submission logic (e.g., using Fetch API) ---
-                    // Example using Formspree (replace YOUR_FORM_ID):
-                    /*
-                    const formData = new FormData(contactForm);
-                    formStatus.textContent = 'Sending...';
-                    formStatus.style.color = 'var(--primary)';
-
-                    fetch('https://formspree.io/f/YOUR_FORM_ID', {
-                        method: 'POST',
-                        body: formData,
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    })
-                    .then(response => {
-                        if (response.ok) {
-                            formStatus.textContent = 'Thanks for your message! I\'ll get back to you soon.';
-                            formStatus.style.color = 'green';
-                            contactForm.reset(); // Clear the form
-                        } else {
-                            response.json().then(data => {
-                                if (Object.hasOwn(data, 'errors')) {
-                                    formStatus.textContent = data["errors"].map(error => error["message"]).join(", ");
-                                } else {
-                                    formStatus.textContent = 'Oops! There was a problem submitting your form.';
-                                }
-                                formStatus.style.color = 'red';
-                            })
-                        }
-                    })
-                    .catch(error => {
-                        formStatus.textContent = 'Oops! There was a problem submitting your form.';
-                        formStatus.style.color = 'red';
-                        console.error('Form submission error:', error);
-                    });
-                    */
-
-                     // --- Simple Placeholder Feedback ---
-                     formStatus.textContent = 'Sending (simulation)...';
-                     formStatus.style.color = 'var(--primary)';
-                     setTimeout(() => {
-                         formStatus.textContent = 'Thanks for your message! This is a demo form.';
-                         formStatus.style.color = 'green';
-                         contactForm.reset();
-                         setTimeout(() => { formStatus.textContent = ''; }, 5000); // Clear status after 5s
-                     }, 1500); // Simulate network delay
-
-
-                });
-            }
-
-            // --- Dynamic Year in Footer ---
-            if (currentYearSpan) {
-                 currentYearSpan.textContent = new Date().getFullYear();
-            }
-
-             // --- Image Instructions Toggle (Temporary Display) ---
-             function showAndHideInstructions() {
+             setTimeout(() => {
                  imageContainers.forEach(container => {
-                    if (container.querySelector('.image-instructions')) {
-                        container.classList.add('instructions-visible');
-                    }
+                    container.classList.remove('instructions-visible');
                  });
+             }, 5000);
+         }
+         showAndHideInstructions();
 
-                 setTimeout(() => {
-                     imageContainers.forEach(container => {
-                        container.classList.remove('instructions-visible');
-                     });
-                 }, 5000); // Hide after 5 seconds
-             }
-
-             // Call the function to show instructions temporarily on load
-             showAndHideInstructions();
-
-        });
-    </script>
+    });
+</script>
 </body>
 </html>
